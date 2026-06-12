@@ -1,5 +1,31 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-06-12T18:28:00+00:00",
-  "seen": {}
+  "last_run_utc": "2026-06-12T20:33:00+00:00",
+  "seen": {
+    "doi:10.1111/acps.70110": {
+      "first_week": "2026-W24",
+      "status": "resume",
+      "title": "Repetitive Transcranial Magnetic Stimulation (rTMS) for Adolescent Depression: A Systematic Review and Meta-Analysis of Treatment Response and Suicidal Ideation Reduction"
+    },
+    "doi:10.1016/j.transm.2026.100212": {
+      "first_week": "2026-W24",
+      "status": "resume",
+      "title": "Long-term outcomes following randomized rTMS or antidepressant treatment: A twelve-month naturalistic follow-up"
+    },
+    "doi:10.1192/j.eurpsy.2025.261": {
+      "first_week": "2026-W24",
+      "status": "resume",
+      "title": "A Randomized Controlled Trial Comparing the Efficacy of High-Frequency rTMS and Intermittent Theta-Burst Stimulation on Depressive and Anxiety Symptoms in Depressive Disorder"
+    },
+    "doi:10.1192/j.eurpsy.2025.258": {
+      "first_week": "2026-W24",
+      "status": "resume",
+      "title": "Transdiagnostic Effectiveness of Repetitive Transcranial Magnetic Stimulation for Mood and Anxiety Disorders"
+    },
+    "doi:10.1192/j.eurpsy.2025.296": {
+      "first_week": "2026-W24",
+      "status": "ecarte",
+      "title": "High-Definition Transcranial Direct Current Stimulation-Primed Intermittent Theta Burst Stimulation in Treatment of Negative Symptoms of Schizophrenia - A Randomised Sham Controlled Study"
+    }
+  }
 }

@@ -1,0 +1,49 @@
+{
+  "week": "2026-W24",
+  "reported": [
+    {
+      "id": "doi:10.1111/acps.70110",
+      "venue_id": "acta-psychiatrica-scandinavica",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1016/j.transm.2026.100212",
+      "venue_id": "transcranial-magnetic-stimulation-journal",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1192/j.eurpsy.2025.261",
+      "venue_id": "european-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2025
+    },
+    {
+      "id": "doi:10.1192/j.eurpsy.2025.258",
+      "venue_id": "european-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2025
+    }
+  ]
+}
