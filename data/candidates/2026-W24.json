@@ -1,0 +1,25 @@
+{
+  "week": "2026-W24",
+  "generated_utc": "2026-06-12T18:27:59.251577+00:00",
+  "window": {
+    "from": "2026-06-04",
+    "to": "2026-06-12",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 0,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 0,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 0
+  },
+  "studies": []
+}

@@ -1,5 +1,5 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": null,
+  "last_run_utc": "2026-06-12T18:28:00+00:00",
   "seen": {}
 }
