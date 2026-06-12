@@ -1,6 +1,6 @@
 # Statistiques de la veille tDCS / rTMS
 
-*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-06-12 17:56 UTC.*
+*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-06-12 18:07 UTC.*
 
 ## Résumé
 
