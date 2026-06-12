@@ -1,0 +1,46 @@
+{
+  "_comment": "Paramètres de la veille tDCS/rTMS — éditable par Kamil sur GitHub web, sans toucher au code. La routine relit ce fichier à chaque exécution. Pour suspendre une source, passer son booléen à false.",
+  "modalities": {
+    "tDCS": [
+      "transcranial direct current stimulation",
+      "tDCS",
+      "transcranial electrical stimulation",
+      "tES"
+    ],
+    "rTMS": [
+      "repetitive transcranial magnetic stimulation",
+      "rTMS",
+      "transcranial magnetic stimulation",
+      "TMS",
+      "theta burst stimulation",
+      "iTBS",
+      "accelerated TMS"
+    ]
+  },
+  "indications": [
+    "depression",
+    "major depressive disorder",
+    "treatment-resistant depression",
+    "obsessive-compulsive disorder",
+    "OCD",
+    "schizophrenia",
+    "psychosis",
+    "auditory hallucinations",
+    "addiction",
+    "substance use disorder",
+    "craving",
+    "anxiety",
+    "PTSD",
+    "post-traumatic stress disorder",
+    "bipolar disorder",
+    "negative symptoms"
+  ],
+  "sources": {
+    "pubmed": true,
+    "medrxiv": true,
+    "clinicaltrials": true
+  },
+  "window_days": 8,
+  "max_studies": 5,
+  "max_candidates_per_source": 60
+}

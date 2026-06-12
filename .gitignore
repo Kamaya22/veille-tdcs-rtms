@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+
+# Aperçu HTML local éventuel
+stats-preview.html
+
+# Artefacts macOS
+.DS_Store

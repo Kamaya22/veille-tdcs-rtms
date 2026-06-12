@@ -1,0 +1,53 @@
+name: Send weekly veille by email
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "veilles/**"
+  workflow_dispatch: {}
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    # MAIL_APP_PASSWORD vit dans un Environment de ce nom ; cette ligne le résout.
+    environment: MAIL_APP_PASSWORD
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Find the veille file from this push
+        id: veille
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Run manuel / renvoi : prend le bulletin le plus récemment committé.
+            FILE=$(git log --name-only --pretty=format: -1 -- 'veilles/*.md' | grep -m1 . || true)
+            [ -z "$FILE" ] && FILE=$(ls veilles/*.md 2>/dev/null | sort | tail -1)
+          else
+            FILE=$(git diff --name-only HEAD^ HEAD -- 'veilles/*.md' | head -1)
+          fi
+          if [ -z "$FILE" ]; then
+            echo "Aucun bulletin à envoyer, rien à faire."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          SUBJECT=$(head -1 "$FILE" | sed 's/^# *//')
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "subject=$SUBJECT" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Send email
+        if: steps.veille.outputs.skip == 'false'
+        uses: dawidd6/action-send-mail@v6
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_APP_PASSWORD }}
+          subject: ${{ steps.veille.outputs.subject }}
+          to: ${{ vars.MAIL_TO || 'kamilmahmal22@gmail.com' }}
+          from: Veille tDCS/rTMS <${{ secrets.MAIL_USERNAME }}>
+          html_body: file://${{ steps.veille.outputs.file }}
+          convert_markdown: true

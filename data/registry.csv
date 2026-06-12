@@ -1,0 +1,9 @@
+id,name,publisher,type,discipline,country,notes
+brain-stimulation,Brain Stimulation,Elsevier,journal,neuromodulation,Netherlands,"Revue de référence en neuromodulation (rTMS/tDCS), peer-reviewed"
+journal-affective-disorders,Journal of Affective Disorders,Elsevier,journal,psychiatry,Netherlands,"Troubles de l'humeur, peer-reviewed"
+biological-psychiatry,Biological Psychiatry,Elsevier,journal,psychiatry,United States,"Psychiatrie biologique, fort impact, peer-reviewed"
+american-journal-psychiatry,American Journal of Psychiatry,American Psychiatric Association,journal,psychiatry,United States,"Revue phare de l'APA, peer-reviewed"
+jama-psychiatry,JAMA Psychiatry,American Medical Association,journal,psychiatry,United States,"Psychiatrie clinique (JAMA Network), majoritairement payant"
+frontiers-in-psychiatry,Frontiers in Psychiatry,Frontiers,journal,psychiatry,Switzerland,"Revue psychiatrie en accès ouvert"
+medrxiv,medRxiv,Cold Spring Harbor Laboratory,preprint-server,multidisciplinary,United States,"Serveur de preprints médicaux — NON revu par les pairs"
+clinicaltrials-gov,ClinicalTrials.gov,US National Library of Medicine,registry,multidisciplinary,United States,"Registre d'essais cliniques — protocoles, pas un article publié"
