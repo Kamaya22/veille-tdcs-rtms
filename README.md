@@ -15,12 +15,21 @@ déterministe récupère et dédoublonne, l'agent juge et résume, un push décl
 ```
 Routine cloud Claude (cron hebdomadaire)
   └─ clone ce repo, lit INSTRUCTIONS.md
-       1. python tools/fetch_studies.py   ← interroge PubMed + medRxiv + ClinicalTrials.gov
-       │     sur ~8 jours, dédoublonne contre data/seen.json → data/candidates/<semaine>.json
+       1a. python tools/fetch_studies.py --print-queries  ← URL à interroger (PubMed/medRxiv
+       │      via Europe PMC, ClinicalTrials.gov), construites depuis config/query.json
+       1b. l'agent WebFetch chaque URL → data/raw/<semaine>.json
+       1c. python tools/fetch_studies.py  ← lit data/raw, dédoublonne contre data/seen.json,
+       │      filtre le périmètre → data/candidates/<semaine>.json
        2. l'agent choisit ~5 études, rédige veilles/<semaine>.md (FR), met à jour data/
        3. commit + push
               └─ GitHub Action send-veille.yml détecte veilles/** → email SMTP Gmail
 ```
+
+> **Pourquoi WebFetch ?** Le runner cloud bloque les appels réseau *directs* du script (egress 403),
+> mais l'outil WebFetch de l'agent passe. Le script garde tout le déterminisme (dédoublonnage,
+> filtre, tri) ; seul le GET HTTP est délégué à l'agent. En **local**, où le réseau fonctionne, le
+> script bascule automatiquement en mode HTTP direct si `data/raw/<semaine>.json` est absent
+> (pratique pour tester : `python tools/fetch_studies.py`).
 
 - **Sources** : **Europe PMC** (indexe **PubMed/MEDLINE** revu par les pairs *et* les **preprints
   medRxiv**, en une API JSON ; expose le PMID) + **ClinicalTrials.gov** (API v2, essais en cours).
@@ -46,10 +55,11 @@ chaque exécution, aucune modification de code n'est nécessaire :
 ```
 INSTRUCTIONS.md            — instructions complètes de l'agent (étapes, format FR, traçabilité)
 config/query.json          — paramètres de la veille (éditable à tout moment)
-tools/fetch_studies.py     — récupération déterministe + dédoublonnage (stdlib, sans pip)
+tools/fetch_studies.py     — collecte + dédoublonnage (stdlib, sans pip ; modes raw/HTTP)
 tools/build_stats.py       — génère data/STATS.md à partir de data/reported/
 veilles/<YYYY-Www>.md      — archive des bulletins (= corps des emails)
-data/candidates/<...>.json — candidats bruts récupérés par le script (audit)
+data/raw/<...>.json        — JSON brut des API récupéré par l'agent via WebFetch (mode cloud)
+data/candidates/<...>.json — candidats normalisés + dédoublonnés par le script (audit)
 data/reported/<...>.json   — études réellement résumées (étiquetées par l'agent)
 data/seen.json             — registre anti-doublon (PMID / DOI / NCT déjà traités)
 data/registry.csv          — registre des revues/venues (auditable par Kamil)

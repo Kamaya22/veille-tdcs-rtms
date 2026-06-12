@@ -9,7 +9,8 @@ dédoublonne (reproductible), l'agent juge et étiquette, le script agrège et c
 
 | Fichier | Rôle | Écrit par |
 |---|---|---|
-| `candidates/<YYYY-Www>.json` | **Tous** les candidats bruts récupérés par le script cette semaine (audit). | `tools/fetch_studies.py` |
+| `raw/<YYYY-Www>.json` | JSON brut des API (Europe PMC, ClinicalTrials.gov) récupéré par l'agent via **WebFetch** (le runner cloud bloque le réseau direct du script). | Agent (mode cloud) |
+| `candidates/<YYYY-Www>.json` | Candidats **normalisés + dédoublonnés** par le script à partir de `raw/` (audit). | `tools/fetch_studies.py` |
 | `reported/<YYYY-Www>.json` | Les études **réellement résumées** dans le bulletin, avec étiquetage clinique. | Agent |
 | `seen.json` | Registre anti-doublon : toute étude déjà proposée (résumée **ou** écartée). | Agent |
 | `registry.csv` | Registre canonique des **revues/venues** (éditeur, type, discipline, pays). **Auditable par Kamil.** | Agent (ajouts), Kamil (corrections) |

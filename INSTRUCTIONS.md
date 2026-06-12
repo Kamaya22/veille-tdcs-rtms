@@ -16,18 +16,30 @@ Suis ces étapes complètement et dans l'ordre.
 2. Si `veilles/<YYYY-Www>.md` existe déjà : le bulletin de la semaine a déjà été envoyé.
    **Termine immédiatement sans rien faire** (un second push enverrait un doublon).
 
-## Étape 1 — Récupération des candidats (le script fait le travail déterministe)
+## Étape 1 — Récupération des candidats (réseau via WebFetch, déterminisme via le script)
 
-1. Exécute : `python tools/fetch_studies.py`.
-   - Le script lit `config/query.json`, interroge **PubMed/MEDLINE** (revu par les pairs),
-     **medRxiv** (preprints, étiquetés « non revu ») et **ClinicalTrials.gov** (essais) sur les
-     ~8 derniers jours, **dédoublonne contre `data/seen.json`**, et écrit
-     `data/candidates/<YYYY-Www>.json`.
-2. Lis `data/candidates/<YYYY-Www>.json`. Regarde `counts.new_after_dedup`.
+⚠️ Le runner cloud **bloque les appels réseau directs** du script Python (egress 403). Mais ton
+outil **WebFetch n'est pas bloqué**. La collecte se fait donc en 3 sous-étapes :
+
+1. **Obtiens les URL à interroger** : exécute `python3 tools/fetch_studies.py --print-queries`.
+   Il lit `config/query.json` et affiche un JSON `{week, window, raw_target, queries:[{source,
+   peer_reviewed, url, webfetch_prompt}]}` — une `url` par source (PubMed/MEDLINE et medRxiv via
+   Europe PMC, ClinicalTrials.gov).
+2. **WebFetch chaque `url`** avec le `webfetch_prompt` fourni (il demande d'extraire un tableau
+   JSON d'études). Rassemble tous les résultats dans un seul fichier **`data/raw/<YYYY-Www>.json`**
+   au format : `{"week":"<YYYY-Www>","fetched_utc":"...","studies":[ ... ]}`. Pour chaque étude,
+   reporte les champs renvoyés **plus** `source` et `peer_reviewed` de la requête d'origine
+   (pubmed→peer_reviewed true ; medrxiv et clinicaltrials→false). Champs par étude : `source`,
+   `peer_reviewed`, `title`, `journal`, `authors`, `year`, `date` (YYYY-MM-DD), `doi`, `pmid`,
+   `nct`, `url`, `publication_types`, `abstract`, `conditions`. Mets `null` si une valeur manque.
+   Si une source ne renvoie rien, continue avec les autres ; ne bloque pas pour une API muette.
+3. **Lance le déterministe** : `python3 tools/fetch_studies.py`. Comme `data/raw/<YYYY-Www>.json`
+   existe, le script le lit (aucun réseau), détecte modalités/indications, **dédoublonne contre
+   `data/seen.json`**, applique le filtre de périmètre (modalité tDCS/rTMS réellement présente),
+   trie, et écrit `data/candidates/<YYYY-Www>.json`.
+4. Lis `data/candidates/<YYYY-Www>.json` → `counts.new_after_dedup`.
    - **Si `new_after_dedup` vaut 0** → va directement à l'**Étape 4 (cas vide)** : aucun bulletin,
      aucun email.
-3. Si le script échoue ou qu'une source est indisponible (visible dans les logs / `counts`),
-   continue avec les sources qui ont répondu ; ne bloque pas la veille pour une API en panne.
 
 ## Étape 2 — Sélection et rédaction (ton jugement clinique)
 
@@ -99,8 +111,8 @@ tout comprendre sans cliquer sur un lien.
 ## Étape 4 — Commit et push (c'est l'envoi du mail)
 
 **Cas normal (au moins 1 étude résumée)** :
-1. Committe tous les fichiers modifiés (`veilles/...`, `data/candidates/...`, `data/reported/...`,
-   `data/seen.json`, `data/registry.csv` si enrichi) avec le message
+1. Committe tous les fichiers modifiés (`veilles/...`, `data/raw/...`, `data/candidates/...`,
+   `data/reported/...`, `data/seen.json`, `data/registry.csv` si enrichi) avec le message
    `Veille tDCS/rTMS <YYYY-Www>`.
 2. Pousse sur la branche par défaut **exactement une fois**. La GitHub Action `send-veille.yml`
    détecte le nouveau `veilles/*.md` et envoie son contenu rendu par email (la première ligne,
@@ -109,9 +121,9 @@ tout comprendre sans cliquer sur un lien.
 
 **Cas vide (0 nouvelle étude — Étape 1.2)** :
 1. N'écris **aucun** fichier dans `veilles/`.
-2. Tu peux committer la mise à jour de `data/` (`candidates/...`, `seen.json` avec `last_run_utc`)
-   avec le message `Veille tDCS/rTMS <YYYY-Www> — aucune nouveauté`, puis pousser. Comme rien n'a
-   changé sous `veilles/`, **aucun email n'est envoyé** (conforme à « s'il y en a »).
+2. Tu peux committer la mise à jour de `data/` (`raw/...`, `candidates/...`, `seen.json` avec
+   `last_run_utc`) avec le message `Veille tDCS/rTMS <YYYY-Www> — aucune nouveauté`, puis pousser.
+   Comme rien n'a changé sous `veilles/`, **aucun email n'est envoyé** (conforme à « s'il y en a »).
 
 ## Gestion des échecs
 

@@ -1,24 +1,35 @@
 #!/usr/bin/env python3
-"""Veille tDCS / rTMS — récupération déterministe des nouvelles études.
+"""Veille tDCS / rTMS — récupération + dédoublonnage des nouvelles études.
 
-Rôle : interroger des sources de recherche sérieuses sur les 7 derniers jours pour
-la neuromodulation (tDCS / rTMS) en psychiatrie, dédoublonner contre les études déjà
-traitées (`data/seen.json`), et écrire les candidats dans `data/candidates/<semaine>.json`.
+Philosophie : **le script extrait et dédoublonne (reproductible), l'agent juge et résume.**
 
-Philosophie (reprise des dépôts d'automatisation existants) : **le script extrait et
-dédoublonne (reproductible), l'agent juge et résume (français, clinique).** Le script
-n'écrit donc JAMAIS dans `data/seen.json` — c'est l'agent qui valide ce qui a réellement
-été traité.
+Deux modes de collecte réseau (la partie déterministe — normalisation, dédoublonnage via
+`data/seen.json`, filtre de périmètre, tri — est identique dans les deux) :
 
-Bibliothèque standard uniquement — aucune dépendance pip (robustesse de la routine cloud).
+  1. Mode « raw » (utilisé en cloud) : l'agent récupère le JSON des API via l'outil **WebFetch**
+     (non bloqué par l'egress du runner) et l'écrit dans `data/raw/<semaine>.json` selon le
+     contrat ci-dessous. Le script lit ce fichier — aucun appel réseau direct.
+       - `python tools/fetch_studies.py --print-queries` affiche les URL exactes à WebFetcher.
+       - puis `python tools/fetch_studies.py` lit `data/raw/<semaine>.json` et écrit les candidats.
 
-Sources :
-  - Europe PMC (https://europepmc.org) : indexe PubMed/MEDLINE (revu par les pairs,
-    `SRC:MED`) ET les preprints medRxiv (`SRC:PPR`), via une seule API JSON. Expose le
-    PMID et permet de reconstruire l'URL PubMed.
-  - ClinicalTrials.gov API v2 : essais cliniques nouveaux / récemment mis à jour.
+  2. Mode HTTP direct (repli, surtout pour tests **locaux** où le réseau sortant fonctionne) :
+     si `data/raw/<semaine>.json` est absent, le script interroge lui-même Europe PMC
+     (PubMed/MEDLINE + medRxiv) et ClinicalTrials.gov via `urllib`.
 
-Usage : python tools/fetch_studies.py
+Sortie : `data/candidates/<semaine>.json`. Bibliothèque standard uniquement (aucune dépendance pip).
+
+Contrat de `data/raw/<semaine>.json` (écrit par l'agent en mode WebFetch) :
+{
+  "week": "2026-W24",
+  "fetched_utc": "...",
+  "studies": [
+    {"source": "pubmed|medrxiv|clinicaltrials", "peer_reviewed": true,
+     "title": "...", "journal": "...", "authors": "...", "year": 2026,
+     "date": "YYYY-MM-DD", "doi": null, "pmid": "40123456", "nct": null,
+     "url": "...", "publication_types": ["..."], "abstract": "...",
+     "conditions": ["..."]}
+  ]
+}
 """
 
 import json
@@ -42,31 +53,20 @@ CONFIG = os.path.join(REPO_ROOT, "config", "query.json")
 DATA_DIR = os.path.join(REPO_ROOT, "data")
 SEEN = os.path.join(DATA_DIR, "seen.json")
 CANDIDATES_DIR = os.path.join(DATA_DIR, "candidates")
+RAW_DIR = os.path.join(DATA_DIR, "raw")
 
 EUROPEPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 CTGOV = "https://clinicaltrials.gov/api/v2/studies"
 USER_AGENT = "VeilleNeuromodulation/1.0 (psychiatry research monitoring; mailto:kamilmahmal22@gmail.com)"
+EPMC_PAGE_SIZE = 25   # petit pour que WebFetch renvoie un JSON complet et fiable
+CTGOV_PAGE_SIZE = 50
+CTGOV_FIELDS = ("NCTId|BriefTitle|OfficialTitle|Condition|OverallStatus|StudyType|"
+                "Phase|LastUpdatePostDate|StartDate|BriefSummary|InterventionName")
 
 
 # --------------------------------------------------------------------------- #
-# Utilitaires HTTP / temps
+# Utilitaires
 # --------------------------------------------------------------------------- #
-def http_get_json(url, params, retries=3, timeout=40):
-    """GET JSON avec quelques réessais ; lève la dernière exception en cas d'échec."""
-    full = url + "?" + urllib.parse.urlencode(params)
-    last_err = None
-    for attempt in range(retries):
-        try:
-            req = urllib.request.Request(full, headers={"User-Agent": USER_AGENT,
-                                                         "Accept": "application/json"})
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-        except Exception as e:  # noqa: BLE001 — on veut une dégradation gracieuse
-            last_err = e
-            time.sleep(1.5 * (attempt + 1))
-    raise last_err
-
-
 def iso_week(dt):
     y, w, _ = dt.isocalendar()
     return f"{y}-W{w:02d}"
@@ -79,11 +79,7 @@ def load_json(path, default):
     return default
 
 
-# --------------------------------------------------------------------------- #
-# Construction des requêtes à partir du config
-# --------------------------------------------------------------------------- #
 def quote_term(t):
-    """Met entre guillemets les expressions à plusieurs mots (syntaxe Europe PMC / Essie)."""
     return f'"{t}"' if " " in t.strip() else t.strip()
 
 
@@ -92,9 +88,7 @@ def or_group(terms):
 
 
 def field_group(terms, fields=("TITLE", "ABSTRACT")):
-    """Groupe OR exigeant le terme dans le titre ou le résumé (précision Europe PMC).
-
-    Recherche par jeton (et non sous-chaîne) : les acronymes courts (OCD, PTSD…) sont sûrs."""
+    """Exige le terme dans le titre ou le résumé (précision Europe PMC, recherche par jeton)."""
     parts = []
     for t in terms:
         q = quote_term(t)
@@ -110,7 +104,6 @@ def all_modality_terms(cfg):
 
 
 def _word_match(term, text):
-    """Vrai si `term` apparaît comme mot entier (évite « tES » dans « intestinal »)."""
     return re.search(r"\b" + re.escape(term) + r"\b", text, flags=re.IGNORECASE) is not None
 
 
@@ -126,168 +119,235 @@ def detect_indications(cfg, text):
 
 
 # --------------------------------------------------------------------------- #
-# Source 1 — Europe PMC (PubMed/MEDLINE + preprints medRxiv)
+# Construction des requêtes (URL + consigne WebFetch)
 # --------------------------------------------------------------------------- #
-def europepmc_search(cfg, src_clause, date_from, date_to, peer_reviewed, max_results, label):
-    # Exiger la modalité ET une indication dans le titre/résumé : précision nettement
-    # meilleure que la recherche plein texte par défaut (qui ramène du hors-sujet).
+def epmc_url(cfg, src_clause, date_from, date_to):
     stim = field_group(all_modality_terms(cfg))
     ind = field_group(cfg["indications"])
-    query = (f"{stim} AND {ind} AND {src_clause} "
-             f"AND (FIRST_PDATE:[{date_from} TO {date_to}])")
-    results, cursor, fetched = [], "*", 0
-    page_size = 100
-    while fetched < max_results:
-        try:
-            data = http_get_json(EUROPEPMC, {
-                "query": query,
-                "format": "json",
-                "resultType": "core",
-                "pageSize": min(page_size, max_results - fetched),
-                "cursorMark": cursor,
-            })
-        except Exception as e:  # noqa: BLE001
-            print(f"  [{label}] erreur Europe PMC: {e}", file=sys.stderr)
-            break
-        hits = (data.get("resultList") or {}).get("result", []) or []
-        if not hits:
-            break
-        for r in hits:
-            results.append(normalize_epmc(cfg, r, peer_reviewed))
-        fetched += len(hits)
-        next_cursor = data.get("nextCursorMark")
-        if not next_cursor or next_cursor == cursor:
-            break
-        cursor = next_cursor
-    return results
+    query = f"{stim} AND {ind} AND {src_clause} AND (FIRST_PDATE:[{date_from} TO {date_to}])"
+    params = {"query": query, "format": "json", "resultType": "core", "pageSize": EPMC_PAGE_SIZE}
+    return EUROPEPMC + "?" + urllib.parse.urlencode(params)
 
 
-def normalize_epmc(cfg, r, peer_reviewed):
-    pmid = r.get("pmid")
-    doi = r.get("doi")
-    source = r.get("source", "")  # MED, PPR, PMC...
-    title = (r.get("title") or "").strip()
-    abstract = (r.get("abstractText") or "").strip()
-    journal = ""
-    ji = r.get("journalInfo") or {}
-    if ji.get("journal"):
-        journal = ji["journal"].get("title") or ji["journal"].get("medlineAbbreviation") or ""
-    if not journal:
-        journal = r.get("bookOrReportDetails", {}).get("publisher", "") or r.get("publisher", "")
-    pub_types = []
-    pt = r.get("pubTypeList") or {}
-    if isinstance(pt, dict):
-        pub_types = pt.get("pubType", []) or []
-        if isinstance(pub_types, str):
-            pub_types = [pub_types]
-    # Identifiant stable et URL canonique
+def ctgov_url(cfg, date_from):
+    stim = or_group(all_modality_terms(cfg))
+    ind = or_group(cfg["indications"])
+    params = {
+        "query.term": f"{stim} AND {ind}",
+        "filter.advanced": f"AREA[LastUpdatePostDate]RANGE[{date_from},MAX]",
+        "pageSize": CTGOV_PAGE_SIZE,
+        "fields": CTGOV_FIELDS,
+    }
+    return CTGOV + "?" + urllib.parse.urlencode(params)
+
+
+def build_queries(cfg, date_from, date_to):
+    sources = cfg.get("sources", {})
+    q = []
+    extract = ("Cette URL renvoie une réponse JSON d'API. Extrais CHAQUE étude/enregistrement "
+               "en un tableau JSON. Pour chacun, un objet avec : title, journal, authors, "
+               "year (entier), date (YYYY-MM-DD), doi (ou null), pmid (ou null), nct (ou null), "
+               "url, publication_types (tableau), abstract, conditions (tableau, [] si absent). "
+               "Réponds UNIQUEMENT par le tableau JSON, sans aucun texte autour.")
+    if sources.get("pubmed", True):
+        q.append({"source": "pubmed", "peer_reviewed": True,
+                  "url": epmc_url(cfg, "SRC:MED", date_from, date_to), "webfetch_prompt": extract})
+    if sources.get("medrxiv", True):
+        q.append({"source": "medrxiv", "peer_reviewed": False,
+                  "url": epmc_url(cfg, '(SRC:PPR AND (PUBLISHER:"medRxiv" OR PUBLISHER:medRxiv))',
+                                  date_from, date_to), "webfetch_prompt": extract})
+    if sources.get("clinicaltrials", True):
+        q.append({"source": "clinicaltrials", "peer_reviewed": False,
+                  "url": ctgov_url(cfg, date_from), "webfetch_prompt": extract})
+    return q
+
+
+# --------------------------------------------------------------------------- #
+# Normalisation d'un enregistrement « raw » (fourni par l'agent ou par le HTTP local)
+# --------------------------------------------------------------------------- #
+def normalize_record(cfg, rec, default_source=None, default_peer=None):
+    source = rec.get("source") or default_source
+    pmid = rec.get("pmid") or None
+    nct = rec.get("nct") or None
+    doi = rec.get("doi") or None
     if pmid:
-        sid = f"pmid:{pmid}"
-        url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+        sid, url = f"pmid:{pmid}", rec.get("url") or f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+    elif nct:
+        sid, url = f"nct:{nct}", rec.get("url") or f"https://clinicaltrials.gov/study/{nct}"
     elif doi:
-        sid = f"doi:{doi}"
-        url = f"https://doi.org/{doi}"
+        sid, url = f"doi:{doi}", rec.get("url") or f"https://doi.org/{doi}"
     else:
-        sid = f"epmc:{r.get('id', '')}"
-        url = None
-    text = f"{title} {abstract}"
+        return None  # pas d'identifiant stable → inexploitable pour le dédoublonnage
+    abstract = (rec.get("abstract") or "").strip()
+    title = (rec.get("title") or "").strip()
+    conditions = rec.get("conditions") or []
+    text = f"{title} {abstract} {' '.join(conditions)}"
+    year = rec.get("year")
+    try:
+        year = int(year) if year not in (None, "") else None
+    except (TypeError, ValueError):
+        year = None
+    peer = rec.get("peer_reviewed")
+    if peer is None:
+        peer = default_peer if default_peer is not None else (source == "pubmed")
     return {
         "id": sid,
-        "source": "medrxiv" if source == "PPR" else "pubmed",
-        "epmc_source": source,
+        "source": source,
         "title": title,
-        "journal": journal,
-        "publisher": (r.get("bookOrReportDetails", {}) or {}).get("publisher", ""),
-        "authors": r.get("authorString", ""),
-        "year": int(r["pubYear"]) if str(r.get("pubYear", "")).isdigit() else None,
-        "date": r.get("firstPublishDate") or r.get("firstIndexDate"),
+        "journal": (rec.get("journal") or "").strip(),
+        "authors": rec.get("authors", ""),
+        "year": year,
+        "date": rec.get("date"),
         "doi": doi,
         "pmid": pmid,
+        "nct": nct,
         "url": url,
-        "publication_types": pub_types,
-        "peer_reviewed": peer_reviewed,
+        "publication_types": rec.get("publication_types") or [],
+        "peer_reviewed": bool(peer),
         "modalities": detect_modalities(cfg, text),
         "indications": detect_indications(cfg, text),
         "abstract": abstract,
     }
 
 
+def parse_raw(cfg, raw_doc):
+    out = []
+    for rec in raw_doc.get("studies", []):
+        norm = normalize_record(cfg, rec)
+        if norm:
+            out.append(norm)
+    return out
+
+
 # --------------------------------------------------------------------------- #
-# Source 2 — ClinicalTrials.gov (API v2)
+# Mode HTTP direct (repli local) — Europe PMC + ClinicalTrials.gov
 # --------------------------------------------------------------------------- #
-def clinicaltrials_search(cfg, date_from, max_results, label):
-    stim = or_group(all_modality_terms(cfg))
-    ind = or_group(cfg["indications"])
-    term = f"{stim} AND {ind}"
-    results, token, fetched = [], None, 0
-    while fetched < max_results:
-        params = {
-            "query.term": term,
-            "filter.advanced": f"AREA[LastUpdatePostDate]RANGE[{date_from},MAX]",
-            "pageSize": min(100, max_results - fetched),
-            "fields": ("NCTId|BriefTitle|OfficialTitle|Condition|OverallStatus|StudyType|"
-                       "Phase|LastUpdatePostDate|StartDate|BriefSummary|InterventionName"),
-        }
-        if token:
-            params["pageToken"] = token
+def http_get_json(url, retries=3, timeout=40):
+    last_err = None
+    for attempt in range(retries):
         try:
-            data = http_get_json(CTGOV, params)
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT,
+                                                       "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return json.loads(resp.read().decode("utf-8"))
         except Exception as e:  # noqa: BLE001
-            print(f"  [{label}] erreur ClinicalTrials.gov: {e}", file=sys.stderr)
-            break
-        studies = data.get("studies", []) or []
-        if not studies:
-            break
-        for s in studies:
-            norm = normalize_ctgov(cfg, s)
+            last_err = e
+            time.sleep(1.5 * (attempt + 1))
+    raise last_err
+
+
+def http_collect(cfg, date_from, date_to):
+    studies = []
+    for q in build_queries(cfg, date_from, date_to):
+        try:
+            data = http_get_json(q["url"])
+        except Exception as e:  # noqa: BLE001
+            print(f"  [{q['source']}] erreur réseau directe: {e}", file=sys.stderr)
+            continue
+        if q["source"] == "clinicaltrials":
+            recs = [_ctgov_to_record(s) for s in data.get("studies", []) or []]
+        else:
+            recs = [_epmc_to_record(r) for r in (data.get("resultList") or {}).get("result", []) or []]
+        for r in recs:
+            if not r:
+                continue
+            r["source"] = q["source"]
+            r["peer_reviewed"] = q["peer_reviewed"]
+            norm = normalize_record(cfg, r)
             if norm:
-                results.append(norm)
-        fetched += len(studies)
-        token = data.get("nextPageToken")
-        if not token:
-            break
-    return results
+                studies.append(norm)
+        print(f"  {q['source']} : {len(recs)} résultat(s) bruts", file=sys.stderr)
+    return studies
 
 
-def normalize_ctgov(cfg, s):
+def _epmc_to_record(r):
+    ji = r.get("journalInfo") or {}
+    journal = ""
+    if ji.get("journal"):
+        journal = ji["journal"].get("title") or ji["journal"].get("medlineAbbreviation") or ""
+    pt = r.get("pubTypeList") or {}
+    pub_types = pt.get("pubType", []) if isinstance(pt, dict) else []
+    if isinstance(pub_types, str):
+        pub_types = [pub_types]
+    return {"title": r.get("title"), "journal": journal, "authors": r.get("authorString", ""),
+            "year": r.get("pubYear"), "date": r.get("firstPublishDate") or r.get("firstIndexDate"),
+            "doi": r.get("doi"), "pmid": r.get("pmid"), "url": None,
+            "publication_types": pub_types, "abstract": r.get("abstractText", "")}
+
+
+def _ctgov_to_record(s):
     ps = s.get("protocolSection", {}) or {}
     idm = ps.get("identificationModule", {}) or {}
     nct = idm.get("nctId")
     if not nct:
         return None
-    title = idm.get("briefTitle") or idm.get("officialTitle") or ""
-    status = (ps.get("statusModule", {}) or {}).get("overallStatus", "")
-    last_update = (ps.get("statusModule", {}) or {}).get("lastUpdatePostDateStruct", {}).get("date")
     design = ps.get("designModule", {}) or {}
-    study_type = design.get("studyType", "")
-    phases = design.get("phases", []) or []
-    conds = (ps.get("conditionsModule", {}) or {}).get("conditions", []) or []
-    summary = (ps.get("descriptionModule", {}) or {}).get("briefSummary", "")
-    interventions = [i.get("name", "") for i in
-                     (ps.get("armsInterventionsModule", {}) or {}).get("interventions", []) or []]
-    text = f"{title} {summary} {' '.join(conds)} {' '.join(interventions)}"
-    return {
-        "id": f"nct:{nct}",
-        "source": "clinicaltrials",
-        "title": title.strip(),
-        "journal": "ClinicalTrials.gov",
-        "authors": "",
-        "year": int(last_update[:4]) if last_update and last_update[:4].isdigit() else None,
-        "date": last_update,
-        "doi": None,
-        "nct": nct,
-        "url": f"https://clinicaltrials.gov/study/{nct}",
-        "status": status,
-        "study_type": study_type,
-        "phases": phases,
-        "conditions": conds,
-        "interventions": interventions,
-        "publication_types": [study_type] if study_type else [],
-        "peer_reviewed": False,
-        "modalities": detect_modalities(cfg, text),
-        "indications": detect_indications(cfg, text),
-        "abstract": summary.strip(),
+    return {"title": idm.get("briefTitle") or idm.get("officialTitle") or "",
+            "journal": "ClinicalTrials.gov", "authors": "",
+            "year": (ps.get("statusModule", {}) or {}).get("lastUpdatePostDateStruct", {}).get("date"),
+            "date": (ps.get("statusModule", {}) or {}).get("lastUpdatePostDateStruct", {}).get("date"),
+            "nct": nct, "url": f"https://clinicaltrials.gov/study/{nct}",
+            "publication_types": [design.get("studyType", "")] if design.get("studyType") else [],
+            "abstract": (ps.get("descriptionModule", {}) or {}).get("briefSummary", ""),
+            "conditions": (ps.get("conditionsModule", {}) or {}).get("conditions", []) or []}
+
+
+# --------------------------------------------------------------------------- #
+# Finalisation commune : dédoublonnage, filtre de périmètre, tri, écriture
+# --------------------------------------------------------------------------- #
+def finalize(cfg, studies, week, date_from, date_to, window, sources, mode):
+    seen_doc = load_json(SEEN, {"last_run_utc": None, "seen": {}})
+    seen_ids = set(seen_doc.get("seen", {}).keys())
+
+    by_id, dup_seen = {}, 0
+    for s in studies:
+        sid = s["id"]
+        if sid in seen_ids:
+            dup_seen += 1
+            continue
+        by_id.setdefault(sid, s)
+    deduped = list(by_id.values())
+
+    # Filet de périmètre : une modalité tDCS/rTMS doit réellement apparaître dans le titre/résumé.
+    new_studies = [s for s in deduped if s.get("modalities")]
+    dropped_no_modality = len(deduped) - len(new_studies)
+
+    def rank(s):
+        pt = " ".join(s.get("publication_types", [])).lower()
+        if "meta-analysis" in pt or "systematic review" in pt:
+            return 0
+        if "randomized" in pt or s.get("source") == "clinicaltrials":
+            return 1
+        if s.get("source") == "medrxiv":
+            return 3
+        return 2
+    new_studies.sort(key=lambda s: (rank(s), s.get("date") or ""))
+
+    counts = {
+        "pubmed": sum(1 for s in new_studies if s["source"] == "pubmed"),
+        "medrxiv": sum(1 for s in new_studies if s["source"] == "medrxiv"),
+        "clinicaltrials": sum(1 for s in new_studies if s["source"] == "clinicaltrials"),
+        "raw_total": len(studies),
+        "filtered_already_seen": dup_seen,
+        "filtered_no_modality": dropped_no_modality,
+        "new_after_dedup": len(new_studies),
     }
+    out = {
+        "week": week, "generated_utc": datetime.now(timezone.utc).isoformat(),
+        "collect_mode": mode,
+        "window": {"from": date_from, "to": date_to, "days": window},
+        "sources_queried": [k for k, v in sources.items() if v],
+        "max_studies": int(cfg.get("max_studies", 5)),
+        "counts": counts, "studies": new_studies,
+    }
+    os.makedirs(CANDIDATES_DIR, exist_ok=True)
+    out_path = os.path.join(CANDIDATES_DIR, f"{week}.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+    print(f"→ {counts['new_after_dedup']} nouvelle(s) étude(s) après dédoublonnage "
+          f"(déjà vues : {dup_seen} ; hors-périmètre : {dropped_no_modality}). Écrit : {out_path}")
+    if counts["new_after_dedup"] == 0:
+        print("Aucune nouveauté : l'agent ne doit créer aucun bulletin (pas d'email).")
 
 
 # --------------------------------------------------------------------------- #
@@ -304,89 +364,28 @@ def main():
     window = int(cfg.get("window_days", 8))
     date_to = now.date().isoformat()
     date_from = (now - timedelta(days=window)).date().isoformat()
-    per_source = int(cfg.get("max_candidates_per_source", 60))
-    sources = cfg.get("sources", {})
 
-    seen_doc = load_json(SEEN, {"last_run_utc": None, "seen": {}})
-    seen_ids = set(seen_doc.get("seen", {}).keys())
+    # Mode --print-queries : afficher les URL à WebFetcher (pour l'agent en cloud).
+    if "--print-queries" in sys.argv:
+        payload = {"week": week, "window": {"from": date_from, "to": date_to, "days": window},
+                   "raw_target": os.path.join("data", "raw", f"{week}.json"),
+                   "queries": build_queries(cfg, date_from, date_to)}
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return
 
-    print(f"Veille {week} — fenêtre {date_from} → {date_to} ({window} j). "
-          f"{len(seen_ids)} étude(s) déjà connue(s).")
+    raw_path = os.path.join(RAW_DIR, f"{week}.json")
+    if os.path.exists(raw_path):
+        mode = "raw (WebFetch)"
+        print(f"Veille {week} — mode {mode}, lecture de {raw_path}")
+        studies = parse_raw(cfg, load_json(raw_path, {"studies": []}))
+        print(f"  {len(studies)} enregistrement(s) exploitables dans le fichier raw")
+    else:
+        mode = "http (direct)"
+        print(f"Veille {week} — mode {mode} (repli local ; pas de data/raw/{week}.json) — "
+              f"fenêtre {date_from} → {date_to} ({window} j)")
+        studies = http_collect(cfg, date_from, date_to)
 
-    raw = []
-    if sources.get("pubmed", True):
-        n = europepmc_search(cfg, "SRC:MED", date_from, date_to, True, per_source, "pubmed")
-        print(f"  PubMed/MEDLINE : {len(n)} résultat(s) bruts")
-        raw.extend(n)
-    if sources.get("medrxiv", True):
-        n = europepmc_search(cfg, '(SRC:PPR AND (PUBLISHER:"medRxiv" OR PUBLISHER:medRxiv))',
-                             date_from, date_to, False, per_source, "medrxiv")
-        print(f"  medRxiv (preprints) : {len(n)} résultat(s) bruts")
-        raw.extend(n)
-    if sources.get("clinicaltrials", True):
-        n = clinicaltrials_search(cfg, date_from, per_source, "clinicaltrials")
-        print(f"  ClinicalTrials.gov : {len(n)} résultat(s) bruts")
-        raw.extend(n)
-
-    # Dédoublonnage : entre sources (même id) + contre l'historique seen.json
-    by_id, dup_seen = {}, 0
-    for study in raw:
-        sid = study["id"]
-        if sid in seen_ids:
-            dup_seen += 1
-            continue
-        if sid not in by_id:
-            by_id[sid] = study
-    deduped = list(by_id.values())
-
-    # Filet de périmètre : ne garder que les études où une modalité tDCS/rTMS est réellement
-    # présente dans le titre/résumé. No-op pour PubMed/medRxiv (déjà filtrés à la requête),
-    # retire le bruit ClinicalTrials.gov (psilocybine, tACS/TUS, stimulation médullaire…).
-    new_studies = [s for s in deduped if s.get("modalities")]
-    dropped_no_modality = len(deduped) - len(new_studies)
-
-    # Tri : preuve la plus forte d'abord, puis date décroissante
-    def sort_key(s):
-        pt = " ".join(s.get("publication_types", [])).lower()
-        if "meta-analysis" in pt or "systematic review" in pt:
-            rank = 0
-        elif "randomized" in pt or s.get("source") == "clinicaltrials":
-            rank = 1
-        elif s.get("source") == "medrxiv":
-            rank = 3
-        else:
-            rank = 2
-        return (rank, "" if not s.get("date") else s["date"])
-    new_studies.sort(key=lambda s: (sort_key(s)[0], (sort_key(s)[1] or "")), reverse=False)
-
-    counts = {
-        "pubmed": sum(1 for s in new_studies if s["source"] == "pubmed"),
-        "medrxiv": sum(1 for s in new_studies if s["source"] == "medrxiv"),
-        "clinicaltrials": sum(1 for s in new_studies if s["source"] == "clinicaltrials"),
-        "raw_total": len(raw),
-        "filtered_already_seen": dup_seen,
-        "filtered_no_modality": dropped_no_modality,
-        "new_after_dedup": len(new_studies),
-    }
-
-    out = {
-        "week": week,
-        "generated_utc": now.isoformat(),
-        "window": {"from": date_from, "to": date_to, "days": window},
-        "sources_queried": [k for k, v in sources.items() if v],
-        "max_studies": int(cfg.get("max_studies", 5)),
-        "counts": counts,
-        "studies": new_studies,
-    }
-    os.makedirs(CANDIDATES_DIR, exist_ok=True)
-    out_path = os.path.join(CANDIDATES_DIR, f"{week}.json")
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
-
-    print(f"→ {counts['new_after_dedup']} nouvelle(s) étude(s) après dédoublonnage "
-          f"(écartées car déjà vues : {dup_seen}). Écrit : {out_path}")
-    if counts["new_after_dedup"] == 0:
-        print("Aucune nouveauté : l'agent ne doit créer aucun bulletin (pas d'email).")
+    finalize(cfg, studies, week, date_from, date_to, window, cfg.get("sources", {}), mode)
 
 
 if __name__ == "__main__":
