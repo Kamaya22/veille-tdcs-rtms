@@ -1,0 +1,60 @@
+{
+  "week": "2026-W25",
+  "reported": [
+    {
+      "id": "doi:10.1016/j.transm.2026.100210",
+      "venue_id": "transcranial-magnetic-stimulation-journal",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41651240",
+      "venue_id": "journal-affective-disorders",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1007/s12311-025-01950-8",
+      "venue_id": "the-cerebellum",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1016/j.xcrm.2025.102402",
+      "venue_id": "cell-reports-medicine",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2025
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2025.1729585",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}

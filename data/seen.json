@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-06-12T20:33:00+00:00",
+  "last_run_utc": "2026-06-15T04:45:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -26,6 +26,41 @@
       "first_week": "2026-W24",
       "status": "ecarte",
       "title": "High-Definition Transcranial Direct Current Stimulation-Primed Intermittent Theta Burst Stimulation in Treatment of Negative Symptoms of Schizophrenia - A Randomised Sham Controlled Study"
+    },
+    "doi:10.1016/j.transm.2026.100210": {
+      "first_week": "2026-W25",
+      "status": "resume",
+      "title": "Consensus statement on the maintenance treatment of depression with rTMS in the Netherlands and Belgium"
+    },
+    "pmid:41651240": {
+      "first_week": "2026-W25",
+      "status": "resume",
+      "title": "Efficacy of 5 × 5 accelerated versus conventional repetitive transcranial magnetic stimulation (rTMS) for treatment-resistant depression"
+    },
+    "doi:10.1007/s12311-025-01950-8": {
+      "first_week": "2026-W25",
+      "status": "resume",
+      "title": "Effectiveness of a Combined High-Definition tDCS-Primed Intermittent Theta Burst Stimulation Protocol Targeting the Cerebellar Vermis in Treatment-Resistant Schizophrenia: a Randomized Sham-Controlled Trial"
+    },
+    "doi:10.1016/j.xcrm.2025.102402": {
+      "first_week": "2026-W25",
+      "status": "resume",
+      "title": "A sequential dual-site repetitive transcranial magnetic stimulation for major depressive disorder: A randomized clinical trial"
+    },
+    "doi:10.3389/fpsyt.2025.1729585": {
+      "first_week": "2026-W25",
+      "status": "resume",
+      "title": "Application of cerebellar vermis theta-burst stimulation patterned repetitive transcranial magnetic stimulation in patients with chronic schizophrenia"
+    },
+    "doi:10.1016/j.cell.2025.12.040": {
+      "first_week": "2026-W25",
+      "status": "ecarte",
+      "title": "A cell type-specific mechanism driving the rapid antidepressant effects of transcranial magnetic stimulation"
+    },
+    "doi:10.1038/s41380-026-03485-8": {
+      "first_week": "2026-W25",
+      "status": "ecarte",
+      "title": "Positive bias in brain and behaviour as a mechanism of transcranial magnetic stimulation depression treatment"
     }
   }
 }
