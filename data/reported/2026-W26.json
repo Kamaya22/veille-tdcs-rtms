@@ -1,0 +1,60 @@
+{
+  "week": "2026-W26",
+  "reported": [
+    {
+      "id": "pmid:40774272",
+      "venue_id": "lancet-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2025
+    },
+    {
+      "id": "doi:10.1038/s41380-026-03560-0",
+      "venue_id": "molecular-psychiatry",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "unknown",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1016/S0165-0327(26)00391-5",
+      "venue_id": "journal-affective-disorders",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41511563",
+      "venue_id": "quality-of-life-research",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "bipolar-depression",
+      "evidence_type": "primary-study",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.3389/fnins.2026.1756383",
+      "venue_id": "frontiers-in-neuroscience",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}

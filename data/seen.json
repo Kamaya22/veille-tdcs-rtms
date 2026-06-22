@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-06-15T04:45:00+00:00",
+  "last_run_utc": "2026-06-22T04:25:53+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -61,6 +61,61 @@
       "first_week": "2026-W25",
       "status": "ecarte",
       "title": "Positive bias in brain and behaviour as a mechanism of transcranial magnetic stimulation depression treatment"
+    },
+    "pmid:40774272": {
+      "first_week": "2026-W26",
+      "status": "resume",
+      "title": "Theta burst stimulation of temporo-parietal cortex regions for the treatment of persistent auditory hallucinations: a multicentre, randomised, sham-controlled, triple-blind phase 3 trial in Germany"
+    },
+    "doi:10.1038/s41380-026-03560-0": {
+      "first_week": "2026-W26",
+      "status": "resume",
+      "title": "Optimized multichannel 4 mA vs conventional transcranial direct current stimulation for major depressive disorder: A randomized sham-controlled trial"
+    },
+    "doi:10.1016/S0165-0327(26)00391-5": {
+      "first_week": "2026-W26",
+      "status": "resume",
+      "title": "Efficacy and safety of accelerated transcranial magnetic stimulation on suicidality in depressive disorders: A systematic review and meta-analysis"
+    },
+    "pmid:41511563": {
+      "first_week": "2026-W26",
+      "status": "resume",
+      "title": "Home-based transcranial direct current stimulation (tDCS) for bipolar depression: effects on quality of life and functioning—an open-label study"
+    },
+    "doi:10.3389/fnins.2026.1756383": {
+      "first_week": "2026-W26",
+      "status": "resume",
+      "title": "Comparative Effects of Intermittent Theta-Burst Stimulation and Sequential Bilateral rTMS on Depression and Emotion Regulation in Major Depressive Disorder: A Randomized Controlled Trial"
+    },
+    "pmid:PMC12938041": {
+      "first_week": "2026-W26",
+      "status": "ecarte",
+      "title": "Intermittent theta-burst stimulation for major depressive disorder with comorbid anxiety: a systematic review and meta-analysis"
+    },
+    "doi:10.3389/fpsyt.2026.1758869": {
+      "first_week": "2026-W26",
+      "status": "ecarte",
+      "title": "Biomarkers predicting transcranial direct current stimulation response in psychiatric disorders: A scoping review"
+    },
+    "doi:10.3389/fnhum.2026.1769095": {
+      "first_week": "2026-W26",
+      "status": "ecarte",
+      "title": "Non-invasive brain stimulation for auditory hallucinations: rTMS, tDCS, and deep brain stimulation — a scoping review"
+    },
+    "doi:10.3389/fpsyt.2026.1805441": {
+      "first_week": "2026-W26",
+      "status": "ecarte",
+      "title": "Transcranial direct current stimulation in depression: a bibliometric analysis"
+    },
+    "doi:10.3389/fpsyt.2026.1731673": {
+      "first_week": "2026-W26",
+      "status": "ecarte",
+      "title": "Home-based accelerated intermittent theta burst stimulation for depression: a case series"
+    },
+    "doi:10.3389/fpsyt.2026.1656576": {
+      "first_week": "2026-W26",
+      "status": "ecarte",
+      "title": "Intermittent versus continuous theta burst stimulation for major depressive disorder and bipolar depression: a systematic review"
     }
   }
 }
