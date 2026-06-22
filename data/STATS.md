@@ -1,13 +1,13 @@
 # Statistiques de la veille tDCS / rTMS
 
-*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-06-15 04:23 UTC.*
+*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-06-22 04:33 UTC.*
 
 ## Résumé
 
-- **Semaines de veille** : 2
-- **Études résumées (cumul)** : 9
-- **Revues distinctes** : 7
-- **Part accès ouvert** : 66.7 %
+- **Semaines de veille** : 3
+- **Études résumées (cumul)** : 14
+- **Revues distinctes** : 11
+- **Part accès ouvert** : 57.1 %
 
 ## Alertes / à vérifier
 
@@ -21,62 +21,69 @@
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| tDCS | 1 | 11.1 % | ██ |
-| rTMS | 8 | 88.9 % | ██████████████████ |
+| tDCS | 3 | 21.4 % | ████ |
+| rTMS | 11 | 78.6 % | ████████████████ |
 
 ### Par indication
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| depression | 7 | 77.8 % | ████████████████ |
-| schizophrenia | 2 | 22.2 % | ████ |
+| depression | 10 | 71.4 % | ██████████████ |
+| schizophrenia | 3 | 21.4 % | ████ |
+| bipolar-depression | 1 | 7.1 % | █ |
 
 ### Par niveau de preuve
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| rct | 4 | 44.4 % | █████████ |
-| cohort | 3 | 33.3 % | ███████ |
-| meta-analysis | 1 | 11.1 % | ██ |
-| systematic-review | 1 | 11.1 % | ██ |
+| rct | 7 | 50.0 % | ██████████ |
+| cohort | 3 | 21.4 % | ████ |
+| meta-analysis | 2 | 14.3 % | ███ |
+| systematic-review | 1 | 7.1 % | █ |
+| primary-study | 1 | 7.1 % | █ |
 
 ### Par source
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| pubmed | 9 | 100.0 % | ████████████████████ |
+| pubmed | 14 | 100.0 % | ████████████████████ |
 
 ### Par accès
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| open | 6 | 66.7 % | █████████████ |
-| paywall | 3 | 33.3 % | ███████ |
+| open | 8 | 57.1 % | ███████████ |
+| paywall | 5 | 35.7 % | ███████ |
+| unknown | 1 | 7.1 % | █ |
 
 ### Par relecture
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| revu par les pairs | 9 | 100.0 % | ████████████████████ |
+| revu par les pairs | 14 | 100.0 % | ████████████████████ |
 
 ### Par année
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| 2026 | 6 | 66.7 % | █████████████ |
-| 2025 | 3 | 33.3 % | ███████ |
+| 2026 | 10 | 71.4 % | ██████████████ |
+| 2025 | 4 | 28.6 % | ██████ |
 
 ## Revues les plus citées (top 15)
 
 | Revue | Études | Part |
 |---|---:|---:|
-| Transcranial Magnetic Stimulation | 2 | 22.2 % |
-| European Psychiatry | 2 | 22.2 % |
-| Acta Psychiatrica Scandinavica | 1 | 11.1 % |
-| Journal of Affective Disorders | 1 | 11.1 % |
-| The Cerebellum | 1 | 11.1 % |
-| Cell Reports Medicine | 1 | 11.1 % |
-| Frontiers in Psychiatry | 1 | 11.1 % |
+| Transcranial Magnetic Stimulation | 2 | 14.3 % |
+| European Psychiatry | 2 | 14.3 % |
+| Journal of Affective Disorders | 2 | 14.3 % |
+| Acta Psychiatrica Scandinavica | 1 | 7.1 % |
+| The Cerebellum | 1 | 7.1 % |
+| Cell Reports Medicine | 1 | 7.1 % |
+| Frontiers in Psychiatry | 1 | 7.1 % |
+| The Lancet Psychiatry | 1 | 7.1 % |
+| Molecular Psychiatry | 1 | 7.1 % |
+| Quality of Life Research | 1 | 7.1 % |
+| Frontiers in Neuroscience | 1 | 7.1 % |
 
 ## Évolution hebdomadaire
 
@@ -84,3 +91,4 @@
 |---|---:|---:|
 | 2026-W24 | 4 | 3 |
 | 2026-W25 | 5 | 5 |
+| 2026-W26 | 5 | 5 |
