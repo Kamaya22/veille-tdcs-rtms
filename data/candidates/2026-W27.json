@@ -1,0 +1,26 @@
+{
+  "week": "2026-W27",
+  "generated_utc": "2026-06-29T04:07:36.589988+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-06-21",
+    "to": "2026-06-29",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 0,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 0,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 0
+  },
+  "studies": []
+}
