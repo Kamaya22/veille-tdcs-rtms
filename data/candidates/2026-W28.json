@@ -1,0 +1,161 @@
+{
+  "week": "2026-W28",
+  "generated_utc": "2026-07-06T04:26:54.304151+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-06-28",
+    "to": "2026-07-06",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 5,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 5,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 5
+  },
+  "studies": [
+    {
+      "id": "doi:10.1016/j.neubiorev.2026.106549",
+      "source": "pubmed",
+      "title": "Efficacy of non-invasive brain stimulation in treatment-resistant schizophrenia: A systematic review and network meta-analysis",
+      "journal": "Neuroscience & Biobehavioral Reviews",
+      "authors": "Tsui HKH, Law V, Wong CTW, Tse W, Lim HC, Zhuoma C, Lim KO, Kranz GS, Chan SKW",
+      "year": 2026,
+      "date": null,
+      "doi": "10.1016/j.neubiorev.2026.106549",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.1016/j.neubiorev.2026.106549",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis",
+        "Network Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS",
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "psychosis",
+        "auditory hallucinations"
+      ],
+      "abstract": "Treatment-resistant schizophrenia (TRS) affects approximately one-third of schizophrenia patients. Non-invasive brain stimulation (NIBS), including repetitive transcranial magnetic stimulation (rTMS) and transcranial direct current stimulation (tDCS), has been investigated as an adjunct treatment. This systematic review and network meta-analysis included 55 studies encompassing 33 distinct NIBS modalities and 1981 patients with TRS. Results showed that low-frequency rTMS (LF-rTMS) applied to the left temporoparietal junction (LTPJ) significantly reduced positive symptoms and auditory hallucinations compared to sham, with a standardised mean difference (SMD) of −0.784 (95% CI: −1.202 to −0.366). Neuronavigated continuous theta-burst stimulation over the left temporoparietal cortex (cTBS-LTPC) and intermittent theta-burst stimulation over the left dorsolateral prefrontal cortex (iTBS-DLPFC) showed benefits for negative and overall psychotic symptoms. All active NIBS modalities were generally well tolerated, with dropout rates similar to sham conditions. The network meta-analysis suggests that site-specific protocols, particularly targeting LTPJ for positive symptoms, may be superior to non-targeted approaches."
+    },
+    {
+      "id": "pmid:41362368",
+      "source": "pubmed",
+      "title": "Efficacy, Effectiveness, and Safety of Transcranial Magnetic Stimulation for Bipolar Depression: A Systematic Review and Meta-Analysis",
+      "journal": "Biological Psychiatry Global Open Science",
+      "authors": "Ventura F, Frias P, Rodrigues da Silva D, McGirr A, Cotovio G, Oliveira-Maia AJ",
+      "year": 2026,
+      "date": null,
+      "doi": null,
+      "pmid": "41362368",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41362368/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "bipolar disorder"
+      ],
+      "abstract": "This systematic review and meta-analysis evaluated the efficacy, effectiveness, and safety of transcranial magnetic stimulation (rTMS and related protocols) for the treatment of bipolar depression. Fifty-six articles encompassing 1709 patients with bipolar depression were included. Pooled results demonstrated a significant antidepressant effect compared to sham (Cohen's d = 0.40). Response rate was 46.81% and remission rate was 28.25% in active treatment groups. High-frequency rTMS (HF-rTMS) and low-frequency rTMS (LF-rTMS) applied to left and right dorsolateral prefrontal cortex (DLPFC) respectively showed significant antidepressant effects. Intermittent theta-burst stimulation (iTBS) was non-inferior to HF-rTMS. The risk of treatment-emergent mania was not significantly elevated compared to sham (OR = 1.3, 95% CI: 0.7–2.4). Higher baseline severity and greater number of treatment sessions were associated with greater treatment response. The findings support the safety and efficacy of TMS as an adjunct treatment for bipolar depression."
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1783758",
+      "source": "pubmed",
+      "title": "Efficacy and safety of rTMS for global symptom severity, negative symptoms, and auditory hallucinations in treatment-resistant schizophrenia: A systematic review and meta-analysis",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Alarabi MA, Albalawi WM, et al.",
+      "year": 2026,
+      "date": null,
+      "doi": "10.3389/fpsyt.2026.1783758",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.3389/fpsyt.2026.1783758",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "auditory hallucinations",
+        "negative symptoms"
+      ],
+      "abstract": "This systematic review and meta-analysis assessed the efficacy and safety of repetitive transcranial magnetic stimulation (rTMS) versus sham in adults with treatment-resistant schizophrenia (TRS). Eight databases were searched up to September 10, 2025. The analysis focused on three primary outcomes: global symptom severity (PANSS total), negative symptoms, and auditory hallucinations (AHRS). Results showed no statistically significant effect of rTMS compared to sham for PANSS total score (SMD 0.14, 95% CI −0.26 to 0.54), negative symptoms (SMD 0.37, 95% CI −0.12 to 0.86), or auditory hallucination rating scale scores (SMD −0.03, 95% CI −0.26 to 0.20). The authors conclude that current evidence does not support a consistent therapeutic benefit of rTMS over sham in treatment-resistant schizophrenia. Heterogeneity, small sample sizes, and methodological variability across trials limit the certainty of findings."
+    },
+    {
+      "id": "pmid:41379812",
+      "source": "pubmed",
+      "title": "The effects of high-frequency repetitive transcranial magnetic stimulation on negative symptoms in schizophrenia patients: A systematic review and meta-analysis",
+      "journal": "PLOS ONE",
+      "authors": null,
+      "year": 2025,
+      "date": "2025-12-11",
+      "doi": "10.1371/journal.pone.0337847",
+      "pmid": "41379812",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41379812/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "psychosis",
+        "negative symptoms"
+      ],
+      "abstract": "Negative symptoms of schizophrenia remain among the most difficult to treat with available pharmacological approaches. High-frequency repetitive transcranial magnetic stimulation (HF-rTMS) has been proposed as a potential treatment. This systematic review and meta-analysis included 17 randomised controlled trials from 6 databases searched up to March 2024. The pooled standardised mean difference (SMD) for negative symptoms was −0.22 (95% CI: −0.38 to −0.05; P=0.009; I²=9%), indicating a small but statistically significant improvement. Subgroup analyses showed greater effects with longer treatment courses (>15 sessions: SMD −0.31, 95% CI −0.49 to −0.13), higher stimulation frequency (20 Hz: SMD −0.40), and DLPFC targeting (SMD −0.25). These findings suggest that HF-rTMS at the dorsolateral prefrontal cortex, particularly with extended treatment protocols, modestly reduces negative symptoms in patients with schizophrenia."
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1849161",
+      "source": "pubmed",
+      "title": "A review of mechanisms and optimization strategies for clinical improvement after repetitive transcranial magnetic stimulation in bipolar disorder",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Korzeniowski W, Koceniak P, Waszkiewicz N, Walczewski K, Rusin G, Antczak J",
+      "year": 2026,
+      "date": "2026-07-02",
+      "doi": "10.3389/fpsyt.2026.1849161",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.3389/fpsyt.2026.1849161",
+      "publication_types": [
+        "Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "bipolar disorder"
+      ],
+      "abstract": "This narrative review examines the neurobiological mechanisms underlying the therapeutic effects of repetitive transcranial magnetic stimulation (rTMS) in bipolar disorder and strategies to optimise clinical outcomes. The review discusses predictors of treatment response, including neuroimaging biomarkers (lower left frontal cortex volume and reduced default mode network connectivity associated with better response), electrophysiological markers (slower EEG background activity predicting greater benefit), and clinical factors. Optimisation strategies reviewed include individualised targeting using neuronavigation, personalised frequency and intensity selection based on cortical excitability assessments, and the combination of rTMS with pharmacotherapy or psychotherapy. The review highlights the need for biomarker-driven patient selection and standardised protocols to improve the therapeutic potential of rTMS in this complex, underexplored indication."
+    }
+  ]
+}

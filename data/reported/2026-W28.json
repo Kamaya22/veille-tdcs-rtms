@@ -1,0 +1,60 @@
+{
+  "week": "2026-W28",
+  "reported": [
+    {
+      "id": "doi:10.1016/j.neubiorev.2026.106549",
+      "venue_id": "neuroscience-biobehavioral-reviews",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41362368",
+      "venue_id": "biological-psychiatry-global-open-science",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "bipolar disorder",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1783758",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41379812",
+      "venue_id": "plos-one",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2025
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1849161",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "bipolar disorder",
+      "evidence_type": "to-verify",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-06-29T04:07:30+00:00",
+  "last_run_utc": "2026-07-06T06:30:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -116,6 +116,31 @@
       "first_week": "2026-W26",
       "status": "ecarte",
       "title": "Intermittent versus continuous theta burst stimulation for major depressive disorder and bipolar depression: a systematic review"
+    },
+    "doi:10.1016/j.neubiorev.2026.106549": {
+      "first_week": "2026-W28",
+      "status": "resume",
+      "title": "Efficacy of non-invasive brain stimulation in treatment-resistant schizophrenia: A systematic review and network meta-analysis"
+    },
+    "pmid:41362368": {
+      "first_week": "2026-W28",
+      "status": "resume",
+      "title": "Efficacy, Effectiveness, and Safety of Transcranial Magnetic Stimulation for Bipolar Depression: A Systematic Review and Meta-Analysis"
+    },
+    "doi:10.3389/fpsyt.2026.1783758": {
+      "first_week": "2026-W28",
+      "status": "resume",
+      "title": "Efficacy and safety of rTMS for global symptom severity, negative symptoms, and auditory hallucinations in treatment-resistant schizophrenia: A systematic review and meta-analysis"
+    },
+    "pmid:41379812": {
+      "first_week": "2026-W28",
+      "status": "resume",
+      "title": "The effects of high-frequency repetitive transcranial magnetic stimulation on negative symptoms in schizophrenia patients: A systematic review and meta-analysis"
+    },
+    "doi:10.3389/fpsyt.2026.1849161": {
+      "first_week": "2026-W28",
+      "status": "resume",
+      "title": "A review of mechanisms and optimization strategies for clinical improvement after repetitive transcranial magnetic stimulation in bipolar disorder"
     }
   }
 }
