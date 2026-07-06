@@ -1,19 +1,20 @@
 # Statistiques de la veille tDCS / rTMS
 
-*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-06-22 04:33 UTC.*
+*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-07-06 04:30 UTC.*
 
 ## Résumé
 
-- **Semaines de veille** : 3
-- **Études résumées (cumul)** : 14
-- **Revues distinctes** : 11
-- **Part accès ouvert** : 57.1 %
+- **Semaines de veille** : 4
+- **Études résumées (cumul)** : 19
+- **Revues distinctes** : 14
+- **Part accès ouvert** : 63.2 %
 
 ## Alertes / à vérifier
 
 - Venue à vérifier : European Psychiatry (`european-psychiatry`)
 - Venue à vérifier : European Psychiatry (`european-psychiatry`)
 - Venue à vérifier : The Cerebellum (`the-cerebellum`)
+- Type de preuve `to-verify` pour doi:10.3389/fpsyt.2026.1849161
 
 ## Répartitions
 
@@ -21,69 +22,74 @@
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| tDCS | 3 | 21.4 % | ████ |
-| rTMS | 11 | 78.6 % | ████████████████ |
+| tDCS | 3 | 15.8 % | ███ |
+| rTMS | 16 | 84.2 % | █████████████████ |
 
 ### Par indication
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| depression | 10 | 71.4 % | ██████████████ |
-| schizophrenia | 3 | 21.4 % | ████ |
-| bipolar-depression | 1 | 7.1 % | █ |
+| depression | 10 | 52.6 % | ███████████ |
+| schizophrenia | 6 | 31.6 % | ██████ |
+| bipolar disorder | 2 | 10.5 % | ██ |
+| bipolar-depression | 1 | 5.3 % | █ |
 
 ### Par niveau de preuve
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| rct | 7 | 50.0 % | ██████████ |
-| cohort | 3 | 21.4 % | ████ |
-| meta-analysis | 2 | 14.3 % | ███ |
-| systematic-review | 1 | 7.1 % | █ |
-| primary-study | 1 | 7.1 % | █ |
+| rct | 7 | 36.8 % | ███████ |
+| meta-analysis | 6 | 31.6 % | ██████ |
+| cohort | 3 | 15.8 % | ███ |
+| systematic-review | 1 | 5.3 % | █ |
+| primary-study | 1 | 5.3 % | █ |
+| to-verify | 1 | 5.3 % | █ |
 
 ### Par source
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| pubmed | 14 | 100.0 % | ████████████████████ |
+| pubmed | 19 | 100.0 % | ████████████████████ |
 
 ### Par accès
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| open | 8 | 57.1 % | ███████████ |
-| paywall | 5 | 35.7 % | ███████ |
-| unknown | 1 | 7.1 % | █ |
+| open | 12 | 63.2 % | █████████████ |
+| paywall | 6 | 31.6 % | ██████ |
+| unknown | 1 | 5.3 % | █ |
 
 ### Par relecture
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| revu par les pairs | 14 | 100.0 % | ████████████████████ |
+| revu par les pairs | 19 | 100.0 % | ████████████████████ |
 
 ### Par année
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| 2026 | 10 | 71.4 % | ██████████████ |
-| 2025 | 4 | 28.6 % | ██████ |
+| 2026 | 14 | 73.7 % | ███████████████ |
+| 2025 | 5 | 26.3 % | █████ |
 
 ## Revues les plus citées (top 15)
 
 | Revue | Études | Part |
 |---|---:|---:|
-| Transcranial Magnetic Stimulation | 2 | 14.3 % |
-| European Psychiatry | 2 | 14.3 % |
-| Journal of Affective Disorders | 2 | 14.3 % |
-| Acta Psychiatrica Scandinavica | 1 | 7.1 % |
-| The Cerebellum | 1 | 7.1 % |
-| Cell Reports Medicine | 1 | 7.1 % |
-| Frontiers in Psychiatry | 1 | 7.1 % |
-| The Lancet Psychiatry | 1 | 7.1 % |
-| Molecular Psychiatry | 1 | 7.1 % |
-| Quality of Life Research | 1 | 7.1 % |
-| Frontiers in Neuroscience | 1 | 7.1 % |
+| Frontiers in Psychiatry | 3 | 15.8 % |
+| Transcranial Magnetic Stimulation | 2 | 10.5 % |
+| European Psychiatry | 2 | 10.5 % |
+| Journal of Affective Disorders | 2 | 10.5 % |
+| Acta Psychiatrica Scandinavica | 1 | 5.3 % |
+| The Cerebellum | 1 | 5.3 % |
+| Cell Reports Medicine | 1 | 5.3 % |
+| The Lancet Psychiatry | 1 | 5.3 % |
+| Molecular Psychiatry | 1 | 5.3 % |
+| Quality of Life Research | 1 | 5.3 % |
+| Frontiers in Neuroscience | 1 | 5.3 % |
+| Neuroscience & Biobehavioral Reviews | 1 | 5.3 % |
+| Biological Psychiatry Global Open Science | 1 | 5.3 % |
+| PLOS ONE | 1 | 5.3 % |
 
 ## Évolution hebdomadaire
 
@@ -92,3 +98,4 @@
 | 2026-W24 | 4 | 3 |
 | 2026-W25 | 5 | 5 |
 | 2026-W26 | 5 | 5 |
+| 2026-W28 | 5 | 4 |
