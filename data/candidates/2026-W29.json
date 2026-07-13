@@ -1,0 +1,109 @@
+{
+  "week": "2026-W29",
+  "generated_utc": "2026-07-13T04:34:36.420663+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-07-05",
+    "to": "2026-07-13",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 3,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 3,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 3
+  },
+  "studies": [
+    {
+      "id": "doi:10.1038/s44220-026-00665-x",
+      "source": "pubmed",
+      "title": "Neurobiomarker-guided neuromodulation for youth with major depressive episodes: a double-blind randomized trial",
+      "journal": "Nature Mental Health",
+      "authors": "Liu J, Xiao Y, Zheng J et al.",
+      "year": 2026,
+      "date": null,
+      "doi": "10.1038/s44220-026-00665-x",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s44220-026-00665-x",
+      "publication_types": [
+        "Randomized Controlled Trial",
+        "Clinical Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "A double-blind randomized controlled trial (enrollment: August 2, 2022 to January 20, 2024) enrolled 219 youth with major depressive episodes (MDE). Using multicenter resting-state fMRI data from 2,328 participants, the study validated functional imbalance along the sensorimotor–association axis as a robust neurobiomarker distinguishing two neurosubtypes—archetypal and atypical. Participants were classified into subtypes and randomly assigned to subtype-specific active rTMS or sham stimulation. The primary outcome was depressive symptom improvement measured by the 17-item Hamilton Depression Rating Scale (HDRS-17). Secondary neurobiological outcomes were assessed using fMRI. Results: in the archetypal subtype, active rTMS produced increased visual cortex fluctuation (met a secondary fMRI outcome) compared to sham. The study supports neurobiomarker-stratified rTMS protocols for youth depression."
+    },
+    {
+      "id": "doi:10.3390/jcm15135194",
+      "source": "pubmed",
+      "title": "Electroconvulsive Therapy (ECT) and Repetitive Transcranial Magnetic Stimulation (rTMS), Benefits and Adverse Effects in Patients with Depression: A Scoping Review",
+      "journal": "Journal of Clinical Medicine",
+      "authors": null,
+      "year": 2026,
+      "date": "2026-07-02",
+      "doi": "10.3390/jcm15135194",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.3390/jcm15135194",
+      "publication_types": [
+        "Scoping Review",
+        "Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "Major depressive disorder, particularly in its treatment-resistant form, remains a leading cause of global disability. When pharmacotherapy and psychotherapy fail, neuromodulation techniques such as electroconvulsive therapy (ECT) and repetitive transcranial magnetic stimulation (rTMS) are increasingly utilized. This scoping review compares ECT and rTMS for the treatment of depression, examining benefits and adverse effects. ECT demonstrated the most robust response rates, particularly in treatment-resistant and severe depression. rTMS showed substantial efficacy with a more favorable safety profile. The review calls for well-designed comparative studies, standardized protocol reporting, maintenance-treatment strategies, and clinically meaningful safety and functional outcome measures."
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1860185",
+      "source": "pubmed",
+      "title": "The applications of TMS in brain function assessment and treatment of mental disorders: a narrative review",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Zhen W, Chen J, Zhen H, Zhang Y, Du S, Zhang W, Peng D",
+      "year": 2026,
+      "date": "2026-07-06",
+      "doi": "10.3389/fpsyt.2026.1860185",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1860185/full",
+      "publication_types": [
+        "Review",
+        "Narrative Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS",
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "obsessive-compulsive disorder",
+        "OCD",
+        "schizophrenia"
+      ],
+      "abstract": "This narrative review examines the applications of transcranial magnetic stimulation (TMS) in brain function assessment and the treatment of mental disorders. Authored by researchers from Wenzhou Medical University, Guangzhou Medical University, and Peking University Sixth Hospital, it provides a summary table covering major disorders (depression, OCD, schizophrenia, autism spectrum disorder, and others), stimulation targets, clinical applications, potential mechanisms, and current evidence. The review compares rTMS with tDCS approaches and discusses the role of neuronavigation and emerging protocols such as theta-burst stimulation."
+    }
+  ]
+}

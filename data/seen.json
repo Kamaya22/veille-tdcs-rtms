@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-07-06T06:30:00+00:00",
+  "last_run_utc": "2026-07-13T04:30:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -141,6 +141,21 @@
       "first_week": "2026-W28",
       "status": "resume",
       "title": "A review of mechanisms and optimization strategies for clinical improvement after repetitive transcranial magnetic stimulation in bipolar disorder"
+    },
+    "doi:10.1038/s44220-026-00665-x": {
+      "first_week": "2026-W29",
+      "status": "resume",
+      "title": "Neurobiomarker-guided neuromodulation for youth with major depressive episodes: a double-blind randomized trial"
+    },
+    "doi:10.3390/jcm15135194": {
+      "first_week": "2026-W29",
+      "status": "resume",
+      "title": "Electroconvulsive Therapy (ECT) and Repetitive Transcranial Magnetic Stimulation (rTMS), Benefits and Adverse Effects in Patients with Depression: A Scoping Review"
+    },
+    "doi:10.3389/fpsyt.2026.1860185": {
+      "first_week": "2026-W29",
+      "status": "ecarte",
+      "title": "The applications of TMS in brain function assessment and treatment of mental disorders: a narrative review"
     }
   }
 }

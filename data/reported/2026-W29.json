@@ -1,0 +1,27 @@
+{
+  "week": "2026-W29",
+  "reported": [
+    {
+      "id": "doi:10.1038/s44220-026-00665-x",
+      "venue_id": "nature-mental-health",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "unknown",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.3390/jcm15135194",
+      "venue_id": "journal-of-clinical-medicine",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}
