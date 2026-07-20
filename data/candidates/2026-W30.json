@@ -1,0 +1,79 @@
+{
+  "week": "2026-W30",
+  "generated_utc": "2026-07-20T04:32:23.522672+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-07-12",
+    "to": "2026-07-20",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 2,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 2,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 2
+  },
+  "studies": [
+    {
+      "id": "doi:10.3389/fpsyt.2026.1887581",
+      "source": "pubmed",
+      "title": "Effectiveness of low-frequency, non-navigated repetitive transcranial magnetic stimulation for obsessive-compulsive disorder: a systematic review and meta-analysis of randomized controlled trials",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Liu X, Li J, Li J",
+      "year": 2026,
+      "date": "2026-07-17",
+      "doi": "10.3389/fpsyt.2026.1887581",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1887581/full",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "obsessive-compulsive disorder",
+        "OCD"
+      ],
+      "abstract": "Low-frequency (predominantly 1 Hz), non-neuronavigated repetitive transcranial magnetic stimulation (rTMS) represents a surface-coil protocol class distinct from the FDA-cleared deep TMS approach for OCD. This PRISMA 2020-compliant systematic review and meta-analysis searched PubMed, Embase, and Web of Science from inception through May 2025. Eligible studies were sham-controlled RCTs reporting Y-BOCS total scores; risk of bias was assessed using the Cochrane RoB 2.0 tool. Fourteen RCTs (N=460; 252 active rTMS, 208 sham or control) were included. The primary pooled analysis yielded a mean difference (MD) in Y-BOCS scores of -0.69 (95% CI: -1.75 to 0.38; P=0.21; I2=58%), indicating no statistically significant benefit of rTMS over sham. Pre-specified subgroup analyses examined stimulation target, treatment duration, and frequency."
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1841894",
+      "source": "pubmed",
+      "title": "Intracranial hypertension after MECT: successful transition to rTMS for refractory auditory hallucinations: a case report",
+      "journal": "Frontiers in Psychiatry",
+      "authors": null,
+      "year": 2026,
+      "date": "2026-07-13",
+      "doi": "10.3389/fpsyt.2026.1841894",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1841894/full",
+      "publication_types": [
+        "Case Report"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "psychosis",
+        "auditory hallucinations"
+      ],
+      "abstract": "A 21-year-old female patient with schizophrenia, whose primary symptom was refractory auditory hallucinations, developed intracranial hypertension syndrome following her first session of modified electroconvulsive therapy (MECT), presenting with severe headache, projectile vomiting, diplopia and meningeal signs. She subsequently received 1 Hz repetitive transcranial magnetic stimulation (rTMS) applied to the left temporo-parietal cortex with each session delivering 1,500 pulses at 74% of the resting motor threshold. Markedly diminished auditory hallucinations were noted 3 days after completing rTMS."
+    }
+  ]
+}
