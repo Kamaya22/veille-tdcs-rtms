@@ -1,13 +1,13 @@
 # Statistiques de la veille tDCS / rTMS
 
-*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-07-06 04:30 UTC.*
+*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-07-27 04:38 UTC.*
 
 ## Résumé
 
-- **Semaines de veille** : 4
-- **Études résumées (cumul)** : 19
-- **Revues distinctes** : 14
-- **Part accès ouvert** : 63.2 %
+- **Semaines de veille** : 5
+- **Études résumées (cumul)** : 21
+- **Revues distinctes** : 15
+- **Part accès ouvert** : 66.7 %
 
 ## Alertes / à vérifier
 
@@ -22,74 +22,76 @@
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| tDCS | 3 | 15.8 % | ███ |
-| rTMS | 16 | 84.2 % | █████████████████ |
+| tDCS | 3 | 14.3 % | ███ |
+| rTMS | 18 | 85.7 % | █████████████████ |
 
 ### Par indication
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| depression | 10 | 52.6 % | ███████████ |
-| schizophrenia | 6 | 31.6 % | ██████ |
-| bipolar disorder | 2 | 10.5 % | ██ |
-| bipolar-depression | 1 | 5.3 % | █ |
+| depression | 11 | 52.4 % | ██████████ |
+| schizophrenia | 6 | 28.6 % | ██████ |
+| bipolar disorder | 2 | 9.5 % | ██ |
+| bipolar-depression | 1 | 4.8 % | █ |
+| obsessive-compulsive disorder | 1 | 4.8 % | █ |
 
 ### Par niveau de preuve
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| rct | 7 | 36.8 % | ███████ |
-| meta-analysis | 6 | 31.6 % | ██████ |
-| cohort | 3 | 15.8 % | ███ |
-| systematic-review | 1 | 5.3 % | █ |
-| primary-study | 1 | 5.3 % | █ |
-| to-verify | 1 | 5.3 % | █ |
+| rct | 8 | 38.1 % | ████████ |
+| meta-analysis | 7 | 33.3 % | ███████ |
+| cohort | 3 | 14.3 % | ███ |
+| systematic-review | 1 | 4.8 % | █ |
+| primary-study | 1 | 4.8 % | █ |
+| to-verify | 1 | 4.8 % | █ |
 
 ### Par source
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| pubmed | 19 | 100.0 % | ████████████████████ |
+| pubmed | 21 | 100.0 % | ████████████████████ |
 
 ### Par accès
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| open | 12 | 63.2 % | █████████████ |
-| paywall | 6 | 31.6 % | ██████ |
-| unknown | 1 | 5.3 % | █ |
+| open | 14 | 66.7 % | █████████████ |
+| paywall | 6 | 28.6 % | ██████ |
+| unknown | 1 | 4.8 % | █ |
 
 ### Par relecture
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| revu par les pairs | 19 | 100.0 % | ████████████████████ |
+| revu par les pairs | 21 | 100.0 % | ████████████████████ |
 
 ### Par année
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| 2026 | 14 | 73.7 % | ███████████████ |
-| 2025 | 5 | 26.3 % | █████ |
+| 2026 | 16 | 76.2 % | ███████████████ |
+| 2025 | 5 | 23.8 % | █████ |
 
 ## Revues les plus citées (top 15)
 
 | Revue | Études | Part |
 |---|---:|---:|
-| Frontiers in Psychiatry | 3 | 15.8 % |
-| Transcranial Magnetic Stimulation | 2 | 10.5 % |
-| European Psychiatry | 2 | 10.5 % |
-| Journal of Affective Disorders | 2 | 10.5 % |
-| Acta Psychiatrica Scandinavica | 1 | 5.3 % |
-| The Cerebellum | 1 | 5.3 % |
-| Cell Reports Medicine | 1 | 5.3 % |
-| The Lancet Psychiatry | 1 | 5.3 % |
-| Molecular Psychiatry | 1 | 5.3 % |
-| Quality of Life Research | 1 | 5.3 % |
-| Frontiers in Neuroscience | 1 | 5.3 % |
-| Neuroscience & Biobehavioral Reviews | 1 | 5.3 % |
-| Biological Psychiatry Global Open Science | 1 | 5.3 % |
-| PLOS ONE | 1 | 5.3 % |
+| Frontiers in Psychiatry | 4 | 19.0 % |
+| Transcranial Magnetic Stimulation | 2 | 9.5 % |
+| European Psychiatry | 2 | 9.5 % |
+| Journal of Affective Disorders | 2 | 9.5 % |
+| Acta Psychiatrica Scandinavica | 1 | 4.8 % |
+| The Cerebellum | 1 | 4.8 % |
+| Cell Reports Medicine | 1 | 4.8 % |
+| The Lancet Psychiatry | 1 | 4.8 % |
+| Molecular Psychiatry | 1 | 4.8 % |
+| Quality of Life Research | 1 | 4.8 % |
+| Frontiers in Neuroscience | 1 | 4.8 % |
+| Neuroscience & Biobehavioral Reviews | 1 | 4.8 % |
+| Biological Psychiatry Global Open Science | 1 | 4.8 % |
+| PLOS ONE | 1 | 4.8 % |
+| JAMA Network Open | 1 | 4.8 % |
 
 ## Évolution hebdomadaire
 
@@ -99,3 +101,4 @@
 | 2026-W25 | 5 | 5 |
 | 2026-W26 | 5 | 5 |
 | 2026-W28 | 5 | 4 |
+| 2026-W31 | 2 | 2 |
