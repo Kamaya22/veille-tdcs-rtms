@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-07-06T06:30:00+00:00",
+  "last_run_utc": "2026-07-27T06:00:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -141,6 +141,21 @@
       "first_week": "2026-W28",
       "status": "resume",
       "title": "A review of mechanisms and optimization strategies for clinical improvement after repetitive transcranial magnetic stimulation in bipolar disorder"
+    },
+    "doi:10.3389/fpsyt.2026.1887581": {
+      "first_week": "2026-W31",
+      "status": "resume",
+      "title": "Effectiveness of low-frequency, non-navigated repetitive transcranial magnetic stimulation for obsessive-compulsive disorder: a systematic review and meta-analysis of randomized controlled trials"
+    },
+    "doi:10.1001/jamanetworkopen.2026.21262": {
+      "first_week": "2026-W31",
+      "status": "resume",
+      "title": "Intermittent Theta-Burst Stimulation and Depressive Symptoms in Major Depressive Disorder: A Randomized Clinical Trial"
+    },
+    "doi:10.1001/jamanetworkopen.2026.21592": {
+      "first_week": "2026-W31",
+      "status": "ecarte",
+      "title": "Prefrontal Transcranial Pulse Stimulation for Major Depressive Disorder: A Randomized Clinical Trial"
     }
   }
 }

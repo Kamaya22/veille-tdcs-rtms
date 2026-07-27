@@ -1,0 +1,39 @@
+{
+  "week": "2026-W31",
+  "fetched_utc": "2026-07-27T06:00:00+00:00",
+  "fetch_note": "APIs directes bloquées (egress HTTP 403 : ebi.ac.uk, clinicaltrials.gov). Collecte via WebSearch (même méthode que W26, W27, W28). Les semaines W29 (13–19 juil.) et W30 (20–26 juil.) n'ayant pas été traitées, la fenêtre de recherche a été étendue au 13 juil. pour capturer les études manquées. Deux études nouvelles identifiées, non présentes dans data/seen.json.",
+  "studies": [
+    {
+      "source": "pubmed",
+      "peer_reviewed": true,
+      "title": "Intermittent Theta-Burst Stimulation and Depressive Symptoms in Major Depressive Disorder: A Randomized Clinical Trial",
+      "journal": "JAMA Network Open",
+      "authors": "Ørbo MC, et al.",
+      "year": 2026,
+      "date": "2026-07-14",
+      "doi": "10.1001/jamanetworkopen.2026.21262",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.1001/jamanetworkopen.2026.21262",
+      "publication_types": ["Randomized Controlled Trial"],
+      "abstract": "Background: Intermittent theta-burst stimulation (iTBS) is an FDA-cleared non-invasive brain stimulation technique. This randomized clinical trial tested whether 10 sessions of once-daily iTBS improve depressive symptoms more than sham in adults with major depressive disorder (MDD). Methods: 73 participants with MDD (Montgomery-Åsberg Depression Rating Scale [MADRS] score ≥20, aged 22–65 years) were randomized to active iTBS (n=41) or sham (n=32) at an outpatient psychiatric clinic in North Norway (UiT The Arctic University of Norway), January 2022–June 2025. Both groups received 10 once-daily sessions targeting the left dorsolateral prefrontal cortex. Primary outcome: MADRS score over time. Results: Active iTBS produced significantly greater reductions in MADRS scores at day 5 (mean difference 2.89 [95% CI 0.13–5.64]; Hedges' g=0.50; P=0.04). At day 10, depression-score reduction was approximately 42% in the iTBS group vs 22% in the sham group. At 4-week follow-up, no significant between-group difference remained, as the sham group progressively improved and converged with the active group. Adverse events were mild and transient. Conclusion: A 10-session course of once-daily iTBS produces rapid improvements in MDD, with effects evident by day 5, but these benefits did not persist at 4-week follow-up. Longer or maintenance protocols may be needed to sustain antidepressant effects.",
+      "conditions": ["Major Depressive Disorder", "Depression"]
+    },
+    {
+      "source": "pubmed",
+      "peer_reviewed": true,
+      "title": "Effectiveness of low-frequency, non-navigated repetitive transcranial magnetic stimulation for obsessive-compulsive disorder: a systematic review and meta-analysis of randomized controlled trials",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Liu X, Li J, Li J",
+      "year": 2026,
+      "date": "2026-07-17",
+      "doi": "10.3389/fpsyt.2026.1887581",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.3389/fpsyt.2026.1887581",
+      "publication_types": ["Systematic Review", "Meta-Analysis"],
+      "abstract": "Background: Low-frequency (1 Hz) repetitive transcranial magnetic stimulation (LF-rTMS) applied with non-neuronavigated surface coils has been proposed as an add-on treatment for obsessive-compulsive disorder (OCD). This meta-analysis evaluates the evidence for this protocol, distinct from the FDA-cleared deep TMS approach. Methods: Systematic review and meta-analysis of randomized controlled trials (RCTs) comparing LF-rTMS to sham for OCD. Fourteen RCTs were included. Primary outcome: Yale-Brown Obsessive-Compulsive Scale (Y-BOCS) scores. Results: Pooled analysis showed no statistically significant benefit of LF-rTMS over sham for OCD symptom reduction (mean difference −0.69, 95% CI: −1.75 to 0.38; P=0.21). Conclusion: Current evidence from 14 RCTs does not support a statistically significant therapeutic benefit of surface-coil, non-neuronavigated 1 Hz rTMS over sham for OCD. These findings contrast with the FDA-cleared deep TMS protocol, suggesting that coil geometry, targeting precision and stimulation depth are likely critical factors in TMS efficacy for OCD.",
+      "conditions": ["Obsessive-Compulsive Disorder", "OCD"]
+    }
+  ]
+}

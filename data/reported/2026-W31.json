@@ -1,0 +1,27 @@
+{
+  "week": "2026-W31",
+  "reported": [
+    {
+      "id": "doi:10.3389/fpsyt.2026.1887581",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "obsessive-compulsive disorder",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1001/jamanetworkopen.2026.21262",
+      "venue_id": "jama-network-open",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}
