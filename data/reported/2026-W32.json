@@ -1,0 +1,49 @@
+{
+  "week": "2026-W32",
+  "reported": [
+    {
+      "id": "doi:10.1007/s12519-025-00983-7",
+      "venue_id": "world-journal-pediatrics",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2025
+    },
+    {
+      "id": "doi:10.1016/j.brs.2025.11.007",
+      "venue_id": "brain-stimulation",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "PTSD",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1038/s41380-026-03535-1",
+      "venue_id": "molecular-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42476741",
+      "venue_id": "bmj-open",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "depression",
+      "evidence_type": "trial-protocol",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}

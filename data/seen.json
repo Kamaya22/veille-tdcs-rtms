@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-07-27T06:00:00+00:00",
+  "last_run_utc": "2026-08-03T06:00:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -156,6 +156,31 @@
       "first_week": "2026-W31",
       "status": "ecarte",
       "title": "Prefrontal Transcranial Pulse Stimulation for Major Depressive Disorder: A Randomized Clinical Trial"
+    },
+    "doi:10.1007/s12519-025-00983-7": {
+      "first_week": "2026-W32",
+      "status": "resume",
+      "title": "Efficacy and safety of repetitive transcranial magnetic stimulation in youth with depression: a systematic review and meta-analysis of randomized sham-controlled trials"
+    },
+    "doi:10.1016/j.brs.2025.11.007": {
+      "first_week": "2026-W32",
+      "status": "resume",
+      "title": "Effectiveness of transcranial magnetic stimulation for posttraumatic stress disorder: A multisite, propensity-matched cohort study of treatment parameters"
+    },
+    "doi:10.1038/s41380-026-03535-1": {
+      "first_week": "2026-W32",
+      "status": "resume",
+      "title": "Circuit-targeted modulation of anxiety symptoms in individuals with major depression: A randomized head-to-head TMS trial"
+    },
+    "pmid:42476741": {
+      "first_week": "2026-W32",
+      "status": "resume",
+      "title": "Enhanced home-based transcranial direct-current stimulation (tDCS) for depression comorbid with borderline personality disorder (BPD): study protocol for a pilot double-blinded randomised controlled trial (TENTADIS)"
+    },
+    "pmid:41038161": {
+      "first_week": "2026-W32",
+      "status": "ecarte",
+      "title": "A sequential dual-site repetitive transcranial magnetic stimulation for major depressive disorder: A randomized clinical trial (doublon : déjà résumé en W25 sous doi:10.1016/j.xcrm.2025.102402)"
     }
   }
 }

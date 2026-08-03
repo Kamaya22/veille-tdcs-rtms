@@ -1,0 +1,159 @@
+{
+  "week": "2026-W32",
+  "generated_utc": "2026-08-03T04:20:05.903554+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-07-26",
+    "to": "2026-08-03",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 5,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 5,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 5
+  },
+  "studies": [
+    {
+      "id": "doi:10.1007/s12519-025-00983-7",
+      "source": "pubmed",
+      "title": "Efficacy and safety of repetitive transcranial magnetic stimulation in youth with depression: a systematic review and meta-analysis of randomized sham-controlled trials",
+      "journal": "World Journal of Pediatrics",
+      "authors": "to-verify (search: Springer Nature)",
+      "year": 2025,
+      "date": "2025-10-01",
+      "doi": "10.1007/s12519-025-00983-7",
+      "pmid": null,
+      "nct": null,
+      "url": "https://link.springer.com/article/10.1007/s12519-025-00983-7",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression"
+      ],
+      "abstract": "A systematic review and meta-analysis of randomized sham-controlled trials (RCTs) examined the efficacy and safety of repetitive transcranial magnetic stimulation (rTMS) in youth with depression. Nine databases were searched from inception to April 30, 2025. Sixteen studies with 1295 patients aged 10–25 years were included. Meta-analysis showed active rTMS significantly reduced depression scale scores compared to sham (SMD = -0.93, 95% CI: -1.31 to -0.55). Subgroup analyses showed significant symptom relief at week 2 (SMD = -0.66, 95% CI: -1.25 to -0.07) and week 4 (SMD = -1.28, 95% CI: -1.82 to -0.75). Pooled response rate ratio was 1.24 (95% CI: 1.06–1.45) and remission rate ratio was 1.63 (95% CI: 1.11–2.39), with a number needed to treat (NNT) of 10. Evidence indicates rTMS is effective, safe, and exhibits a relatively rapid onset of action for treating depression in youth."
+    },
+    {
+      "id": "pmid:41038161",
+      "source": "pubmed",
+      "title": "A sequential dual-site repetitive transcranial magnetic stimulation for major depressive disorder: A randomized clinical trial",
+      "journal": "Cell Reports Medicine",
+      "authors": "Unclear from search — to-verify",
+      "year": 2025,
+      "date": "2025-10-01",
+      "doi": null,
+      "pmid": "41038161",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41038161/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "Background: Accelerated rTMS protocols reduce treatment burden and may enhance efficacy. Objective: To examine the antidepressant effects of a sequential dorsolateral prefrontal cortex (dlPFC)–dorsomedial prefrontal cortex (dmPFC) accelerated rTMS protocol (CamFAST-P) compared to sham in major depressive disorder (MDD). Methods: A double-blind, sham-controlled randomized clinical trial with 4 days of treatment (4 sessions/day, totaling 16 sessions). Neuroimaging with resting-state fMRI was performed. Results: At week 4, the Montgomery-Åsberg Depression Rating Scale (MADRS) reduction was significantly larger in the active group, with significant differences already apparent on day 4. Response rates were 57.69% (active) vs 23.08% (sham); remission rates were 38.46% vs 15.38%. Of responders, over 85% remained in remission over 6 months. Resting-state fMRI showed increased dlPFC–frontoparietal and decreased dmPFC–amygdalo-subcallosal cingulate functional connectivity associated with symptom improvement. Conclusions: The sequential dlPFC–dmPFC accelerated rTMS protocol demonstrates strong antidepressant efficacy with rapid onset, sustainable remission at 6 months, and identifiable neural signatures of response."
+    },
+    {
+      "id": "nct:NCT04604210",
+      "source": "pubmed",
+      "title": "Circuit-targeted modulation of anxiety symptoms in individuals with major depression: A randomized head-to-head TMS trial",
+      "journal": "Molecular Psychiatry",
+      "authors": "Taylor JJ, Li J, Lin C, et al.",
+      "year": 2026,
+      "date": "2026-03-30",
+      "doi": "10.1038/s41380-026-03535-1",
+      "pmid": null,
+      "nct": "NCT04604210",
+      "url": "https://www.nature.com/articles/s41380-026-03535-1",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "anxiety"
+      ],
+      "abstract": "Background: TMS is effective for major depressive disorder (MDD) and anxious depression. Circuit-based targeting may allow symptom-specific improvement. Objective: To test whether targeting different prefrontal circuits differentially improves dysphoric versus anxiosomatic symptom profiles in comorbid MDD and anxiety. Methods: Forty individuals with comorbid MDD and anxiety (most in their early 30s, two-thirds female, three-quarters White) were randomized in a blinded head-to-head trial (no sham group) to 30 weekday TMS sessions over 6 weeks at one of two circuit-based targets: (1) a dlPFC site connected to a circuit causally linked with dysphoric symptoms (sadness, decreased interest, suicidal ideation); (2) a dmPFC site hypothesized to preferentially improve anxiosomatic symptoms. Data from 36 participants were included in the primary analysis. Results: Both targets reduced depression symptoms. However, targeting the dmPFC circuit produced significantly greater improvements in anxiety symptoms (anxiosomatic dimension) than the dlPFC target. Retrospective connectomics analyses confirmed that the two circuits preferentially modulate different symptom clusters. Conclusions: This head-to-head RCT supports a precision psychiatry approach to TMS in which symptom-specific circuit targeting drives differential improvement in dysphoric vs. anxiosomatic profiles, with implications for personalizing TMS for comorbid MDD and anxiety."
+    },
+    {
+      "id": "pmid:42476741",
+      "source": "pubmed",
+      "title": "Enhanced home-based transcranial direct-current stimulation (tDCS) for depression comorbid with borderline personality disorder (BPD): study protocol for a pilot double-blinded randomised controlled trial (TENTADIS)",
+      "journal": "BMJ Open",
+      "authors": "to-verify",
+      "year": 2026,
+      "date": "2026-07-20",
+      "doi": "10.1136/bmjopen-2026-117392",
+      "pmid": "42476741",
+      "nct": "NCT06972368",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42476741/",
+      "publication_types": [
+        "Clinical Trial Protocol",
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "Background: Major depressive disorder (MDD) is the most common comorbidity among individuals with borderline personality disorder (BPD), affecting over 85% of patients and characterized by high recurrence rates and frequent treatment resistance. Non-invasive brain stimulation, particularly transcranial direct current stimulation (tDCS) targeting the dorsolateral prefrontal cortex (DLPFC), has shown promising results in alleviating depression. Objective: This protocol describes TENTADIS, a pilot double-blinded randomized controlled trial assessing the feasibility and preliminary efficacy of 14 home-based tDCS sessions targeting the DLPFC in reducing depressive symptoms in BPD patients with moderate-to-severe depressive episodes. Methods: Participants will be randomized to active or sham tDCS; a 2 mA current is applied for 20 minutes per session over 14 sessions. Assessments are conducted at baseline, post-treatment, and 3-month follow-up. Trial status: recruiting (start January 2026, estimated completion June 2027). Conclusions: If feasible, this protocol could demonstrate the potential of home-based tDCS as an accessible intervention for a population with high treatment burden."
+    },
+    {
+      "id": "doi:10.1016/j.brs.2025.11.007",
+      "source": "pubmed",
+      "title": "Effectiveness of transcranial magnetic stimulation for posttraumatic stress disorder: A multisite, propensity-matched cohort study of treatment parameters",
+      "journal": "Brain Stimulation",
+      "authors": "Philip NS, Berlow YA, Cilli SL, Kozel FA, Zandvakili A, Marcotullio N, Cosmo C, Goldberg MA, Wicklund BD, Madore MR",
+      "year": 2026,
+      "date": "2025-11-13",
+      "doi": "10.1016/j.brs.2025.11.007",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.brainstimjrnl.com/article/S1935-861X(25)00378-X/fulltext",
+      "publication_types": [
+        "Cohort Study",
+        "Multicenter Study",
+        "Observational Study"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "PTSD",
+        "post-traumatic stress disorder"
+      ],
+      "abstract": "Background: Transcranial magnetic stimulation (TMS) is FDA-cleared for major depressive disorder but is frequently used off-label for PTSD. Objective: To examine whether three common TMS protocols yield equivalent outcomes for PTSD symptoms in a large, multisite cohort of veterans with comorbid PTSD and depression. Methods: Clinical outcomes from 756 veterans treated with antidepressant TMS across multiple VA sites were analyzed using propensity matching. Protocols included left prefrontal 10 Hz rTMS (n=526), left prefrontal intermittent theta burst stimulation (iTBS; n=71), and deep TMS (dTMS; n=61). PTSD symptoms were measured with the PCL-5 (PTSD Checklist for DSM-5). Results: All three TMS protocols produced substantial PTSD symptom reductions (18–22 PCL-5 points). PTSD response rates were 63% (10 Hz), 65% (iTBS), and 78% (dTMS); remission rates were 47%, 48%, and 49%, respectively. Both iTBS and dTMS were noninferior to 10 Hz rTMS for PTSD outcomes. Concomitant improvements in depression were also observed. Conclusions: TMS consistently reduces PTSD symptoms across three different protocols in veterans with comorbid PTSD and major depression. Effectiveness was comparable across protocols, supporting clinical flexibility in TMS protocol selection for this population."
+    }
+  ]
+}
