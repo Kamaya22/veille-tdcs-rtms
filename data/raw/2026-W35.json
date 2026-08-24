@@ -1,0 +1,6 @@
+{
+  "week": "2026-W35",
+  "fetched_utc": "2026-08-24T04:10:18.847384+00:00",
+  "note": "Network egress blocked for all research APIs (ebi.ac.uk, clinicaltrials.gov, ncbi.nlm.nih.gov). No studies could be fetched.",
+  "studies": []
+}
