@@ -1,6 +1,6 @@
 {
-  "_comment": "Registre anti-doublon : toute \u00e9tude d\u00e9j\u00e0 propos\u00e9e \u00e0 la veille (r\u00e9sum\u00e9e OU \u00e9cart\u00e9e) y figure et ne sera plus jamais re-propos\u00e9e. \u00c9crit par l'AGENT (pas par le script). Cl\u00e9 = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-08-31T04:10:20.202669+00:00",
+  "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
+  "last_run_utc": "2026-09-07T04:09:38.064682+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -35,7 +35,7 @@
     "pmid:41651240": {
       "first_week": "2026-W25",
       "status": "resume",
-      "title": "Efficacy of 5 \u00d7 5 accelerated versus conventional repetitive transcranial magnetic stimulation (rTMS) for treatment-resistant depression"
+      "title": "Efficacy of 5 × 5 accelerated versus conventional repetitive transcranial magnetic stimulation (rTMS) for treatment-resistant depression"
     },
     "doi:10.1007/s12311-025-01950-8": {
       "first_week": "2026-W25",
@@ -80,7 +80,7 @@
     "pmid:41511563": {
       "first_week": "2026-W26",
       "status": "resume",
-      "title": "Home-based transcranial direct current stimulation (tDCS) for bipolar depression: effects on quality of life and functioning\u2014an open-label study"
+      "title": "Home-based transcranial direct current stimulation (tDCS) for bipolar depression: effects on quality of life and functioning—an open-label study"
     },
     "doi:10.3389/fnins.2026.1756383": {
       "first_week": "2026-W26",
@@ -100,7 +100,7 @@
     "doi:10.3389/fnhum.2026.1769095": {
       "first_week": "2026-W26",
       "status": "ecarte",
-      "title": "Non-invasive brain stimulation for auditory hallucinations: rTMS, tDCS, and deep brain stimulation \u2014 a scoping review"
+      "title": "Non-invasive brain stimulation for auditory hallucinations: rTMS, tDCS, and deep brain stimulation — a scoping review"
     },
     "doi:10.3389/fpsyt.2026.1805441": {
       "first_week": "2026-W26",
@@ -180,7 +180,7 @@
     "pmid:41038161": {
       "first_week": "2026-W32",
       "status": "ecarte",
-      "title": "A sequential dual-site repetitive transcranial magnetic stimulation for major depressive disorder: A randomized clinical trial (doublon : d\u00e9j\u00e0 r\u00e9sum\u00e9 en W25 sous doi:10.1016/j.xcrm.2025.102402)"
+      "title": "A sequential dual-site repetitive transcranial magnetic stimulation for major depressive disorder: A randomized clinical trial (doublon : déjà résumé en W25 sous doi:10.1016/j.xcrm.2025.102402)"
     }
   }
 }
