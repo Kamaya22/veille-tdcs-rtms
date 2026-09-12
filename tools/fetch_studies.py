@@ -142,24 +142,55 @@ def ctgov_url(cfg, date_from):
 
 
 def build_queries(cfg, date_from, date_to):
+    """URL des API REST — utilisées UNIQUEMENT par le mode HTTP direct (repli local).
+
+    En cloud, ces endpoints renvoient 403 (au script ET à WebFetch) : la collecte passe par
+    WebSearch (voir search_plan)."""
     sources = cfg.get("sources", {})
     q = []
-    extract = ("Cette URL renvoie une réponse JSON d'API. Extrais CHAQUE étude/enregistrement "
-               "en un tableau JSON. Pour chacun, un objet avec : title, journal, authors, "
-               "year (entier), date (YYYY-MM-DD), doi (ou null), pmid (ou null), nct (ou null), "
-               "url, publication_types (tableau), abstract, conditions (tableau, [] si absent). "
-               "Réponds UNIQUEMENT par le tableau JSON, sans aucun texte autour.")
     if sources.get("pubmed", True):
         q.append({"source": "pubmed", "peer_reviewed": True,
-                  "url": epmc_url(cfg, "SRC:MED", date_from, date_to), "webfetch_prompt": extract})
+                  "url": epmc_url(cfg, "SRC:MED", date_from, date_to)})
     if sources.get("medrxiv", True):
         q.append({"source": "medrxiv", "peer_reviewed": False,
                   "url": epmc_url(cfg, '(SRC:PPR AND (PUBLISHER:"medRxiv" OR PUBLISHER:medRxiv))',
-                                  date_from, date_to), "webfetch_prompt": extract})
+                                  date_from, date_to)})
     if sources.get("clinicaltrials", True):
         q.append({"source": "clinicaltrials", "peer_reviewed": False,
-                  "url": ctgov_url(cfg, date_from), "webfetch_prompt": extract})
+                  "url": ctgov_url(cfg, date_from)})
     return q
+
+
+# Regroupement des indications en clusters thématiques pour des requêtes WebSearch ciblées.
+INDICATION_CLUSTERS = [
+    ("dépression", ["depression", "major depressive disorder",
+                    "treatment-resistant depression", "bipolar disorder"]),
+    ("TOC", ["obsessive-compulsive disorder", "OCD"]),
+    ("psychose", ["schizophrenia", "psychosis", "auditory hallucinations", "negative symptoms"]),
+    ("addiction", ["addiction", "substance use disorder", "craving"]),
+    ("anxiété-TSPT", ["anxiety", "PTSD", "post-traumatic stress disorder"]),
+]
+MOD_UMBRELLA = ('("tDCS" OR "transcranial direct current stimulation" OR "rTMS" OR '
+                '"repetitive transcranial magnetic stimulation" OR "transcranial magnetic stimulation")')
+
+
+def search_plan(cfg, year):
+    """Requêtes WebSearch ciblées (méthode de collecte en cloud, car les API REST 403)."""
+    inds = set(cfg.get("indications", []))
+    queries = []
+    for _label, terms in INDICATION_CLUSTERS:
+        present = [t for t in terms if t in inds]
+        if not present:
+            continue
+        ind_grp = "(" + " OR ".join(f'"{t}"' for t in present) + ")"
+        queries.append(f"{MOD_UMBRELLA} AND {ind_grp} (randomized OR meta-analysis OR trial) {year}")
+    if cfg.get("sources", {}).get("medrxiv", True):
+        queries.append(f"site:medrxiv.org {MOD_UMBRELLA} "
+                       f"(depression OR schizophrenia OR OCD OR addiction OR anxiety OR PTSD) {year}")
+    if cfg.get("sources", {}).get("clinicaltrials", True):
+        queries.append(f"site:clinicaltrials.gov {MOD_UMBRELLA} "
+                       f"(depression OR schizophrenia OR OCD OR addiction OR anxiety OR PTSD) {year}")
+    return queries
 
 
 # --------------------------------------------------------------------------- #
@@ -365,11 +396,23 @@ def main():
     date_to = now.date().isoformat()
     date_from = (now - timedelta(days=window)).date().isoformat()
 
-    # Mode --print-queries : afficher les URL à WebFetcher (pour l'agent en cloud).
+    # Mode --print-queries : plan de recherche WebSearch (pour l'agent en cloud).
     if "--print-queries" in sys.argv:
-        payload = {"week": week, "window": {"from": date_from, "to": date_to, "days": window},
-                   "raw_target": os.path.join("data", "raw", f"{week}.json"),
-                   "queries": build_queries(cfg, date_from, date_to)}
+        payload = {
+            "week": week,
+            "window": {"from": date_from, "to": date_to, "days": window},
+            "year": now.year,
+            "raw_target": os.path.join("data", "raw", f"{week}.json"),
+            "method": "websearch",
+            "note": ("Les API REST (Europe PMC, ClinicalTrials.gov) renvoient 403 dans le runner, "
+                     "y compris via WebFetch. Méthode : pour chaque requête de `search_queries`, "
+                     "utilise WebSearch ; ouvre les résultats pertinents (PubMed, medRxiv, "
+                     "ClinicalTrials.gov, pages d'éditeurs) avec WebFetch pour récupérer titre, "
+                     "revue, date, identifiant (PMID/DOI/NCT) et résumé ; ne garde que les "
+                     "publications/essais récents (fenêtre `window`) et réellement tDCS/rTMS en "
+                     "psychiatrie ; consigne le tout dans `raw_target` (contrat dans INSTRUCTIONS.md)."),
+            "search_queries": search_plan(cfg, now.year),
+        }
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return
 
