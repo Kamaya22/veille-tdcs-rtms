@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute \u00e9tude d\u00e9j\u00e0 propos\u00e9e \u00e0 la veille (r\u00e9sum\u00e9e OU \u00e9cart\u00e9e) y figure et ne sera plus jamais re-propos\u00e9e. \u00c9crit par l'AGENT (pas par le script). Cl\u00e9 = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-08-31T04:10:20.202669+00:00",
+  "last_run_utc": "2026-09-14T10:00:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -181,6 +181,46 @@
       "first_week": "2026-W32",
       "status": "ecarte",
       "title": "A sequential dual-site repetitive transcranial magnetic stimulation for major depressive disorder: A randomized clinical trial (doublon : d\u00e9j\u00e0 r\u00e9sum\u00e9 en W25 sous doi:10.1016/j.xcrm.2025.102402)"
+    },
+    "pmid:42051577": {
+      "first_week": "2026-W38",
+      "status": "resume",
+      "title": "Noninvasive brain stimulation combined with evidence-based psychotherapy for psychiatric disorders: A meta-analysis of optimal implementation parameters"
+    },
+    "pmid:41808099": {
+      "first_week": "2026-W38",
+      "status": "resume",
+      "title": "A systematic review of transcranial magnetic stimulation for generalized anxiety disorder, obsessive-compulsive disorder, and posttraumatic stress disorder"
+    },
+    "doi:10.1192/j.eurpsy.2026.10614": {
+      "first_week": "2026-W38",
+      "status": "resume",
+      "title": "The efficacy of transcranial direct current stimulation (tDCS) combined with cognitive behavioural therapy for major depressive disorder: a systematic review and meta-analysis of randomised controlled trials"
+    },
+    "pmid:42218138": {
+      "first_week": "2026-W38",
+      "status": "resume",
+      "title": "OFC-induced network modularity improves positive symptoms and attentional alertness in schizophrenia: a combined rTMS-fMRI study"
+    },
+    "pmid:41898296": {
+      "first_week": "2026-W38",
+      "status": "resume",
+      "title": "Non-Invasive Brain Stimulation in Older Inpatients with Depression: A Real-World Comparison of Repetitive Transcranial Magnetic Stimulation (rTMS) and Transcranial Direct Current Stimulation (tDCS) on Depressive Symptoms and Functional Recovery"
+    },
+    "doi:10.3389/fpsyt.2026.1899231": {
+      "first_week": "2026-W38",
+      "status": "ecarte",
+      "title": "Transcranial direct current stimulation combined with cognitive-behavioral interventions for depressive disorders: a systematic review and meta-analysis of sham-controlled randomized trials"
+    },
+    "pmid:42621975": {
+      "first_week": "2026-W38",
+      "status": "ecarte",
+      "title": "rTMS for treatment resistant depression - a single center community experience"
+    },
+    "pmid:42688839": {
+      "first_week": "2026-W38",
+      "status": "ecarte",
+      "title": "Repetitive transcranial magnetic stimulation: advances for psychiatric disorders"
     }
   }
 }

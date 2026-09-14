@@ -1,0 +1,60 @@
+{
+  "week": "2026-W38",
+  "reported": [
+    {
+      "id": "pmid:42051577",
+      "venue_id": "neuroscience-biobehavioral-reviews",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "anxiety",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "unknown",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41808099",
+      "venue_id": "bmc-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "anxiety",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1192/j.eurpsy.2026.10614",
+      "venue_id": "european-psychiatry",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42218138",
+      "venue_id": "nature-communications",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41898296",
+      "venue_id": "biomedicines",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}
