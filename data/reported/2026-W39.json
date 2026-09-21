@@ -1,0 +1,60 @@
+{
+  "week": "2026-W39",
+  "reported": [
+    {
+      "id": "pmid:41674839",
+      "venue_id": "bmc-medicine",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1038/s41380-025-03238-z",
+      "venue_id": "molecular-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42383744",
+      "venue_id": "journal-evidence-based-medicine",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "unknown",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41936982",
+      "venue_id": "journal-affective-disorders",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42620660",
+      "venue_id": "frontiers-in-neurology",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "addiction",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "week": "2026-W39",
+  "generated_utc": "2026-09-21T04:17:17.358339+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-09-13",
+    "to": "2026-09-21",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 7,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 7,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 7
+  },
+  "studies": [
+    {
+      "id": "doi:10.1038/s41380-025-03238-z",
+      "source": "pubmed",
+      "title": "Mapping symptom-general and symptom-specific targets for transcranial magnetic stimulation in schizophrenia: an electric-field modeling meta-analysis",
+      "journal": "Molecular Psychiatry",
+      "authors": "Sinanaj L, Pallis K, Fazel Dehkordi A, Huguelet P, Kaiser S, Bègue I",
+      "year": 2026,
+      "date": "2026-01-01",
+      "doi": "10.1038/s41380-025-03238-z",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s41380-025-03238-z",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "psychosis",
+        "auditory hallucinations",
+        "negative symptoms"
+      ],
+      "abstract": "Background: Prior meta-analyses of transcranial magnetic stimulation (TMS) for schizophrenia have not accounted for dosimetric variability introduced by different stimulation sites. This study combined standard meta-analysis with electric-field (E-field) modeling to identify stimulation sites where E-field strength was most significantly associated with clinical improvement. Methods: Systematic review of randomized, sham-controlled studies. Standard meta-analysis demonstrated benefit of TMS across symptom domains in 4,283 patients, regardless of target or protocol. E-field modeling was then used to identify optimal stimulation targets for specific symptom domains. Results: TMS significantly improved negative and cognitive symptoms with high-frequency stimulation applied to the left prefrontal cortex, whereas positive symptoms (including auditory hallucinations) improved with low-frequency TMS applied to the left temporoparietal cortex. E-field modeling identified specific cortical regions most strongly associated with symptom-domain improvement. Conclusions: TMS for schizophrenia should be tailored to the symptom domain: left DLPFC high-frequency for negative/cognitive symptoms; left temporoparietal low-frequency for positive symptoms. Electric-field modeling provides a principled dosimetric approach to target selection."
+    },
+    {
+      "id": "pmid:41674839",
+      "source": "pubmed",
+      "title": "Acute and long-term effects of repetitive transcranial magnetic stimulation in major depressive episodes: a systematic review and dose-response meta-analysis of randomized sham-controlled trials",
+      "journal": "BMC Medicine",
+      "authors": "Wang Z, Sheng R, Shi R, Zou Z, Steele VR, Guo X, Yuan T",
+      "year": 2026,
+      "date": "2026-02-02",
+      "doi": "10.1186/s12916-026-05089-z",
+      "pmid": "41674839",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41674839/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "Background: To characterize the dose-response relationships between key repetitive transcranial magnetic stimulation (rTMS) dosing parameters and clinical outcomes in major depressive episodes (MDE), and to identify optimal dosing ranges. Methods: Systematic review and one-stage dose-response meta-analysis of randomized sham-controlled trials investigating rTMS for adults with MDE. Outcomes: symptom severity, response, and remission, assessed acutely and in follow-up (>7 days). Four key dosing dimensions (total pulses, pulses/session, sessions, duration) were modeled using restricted cubic spline models. The maximum effective dose (EDmax) within the observed range was derived from the fitted model. Results: Across 108 trials (134 active arms; n=5,621), peak efficacy for acute treatment was observed at 30,000-39,000 total pulses, 1,800-2,200 pulses per session, 14-16 sessions, and 2.7-3.1 weeks of treatment, with no additional benefit from higher doses across all parameters. Long-term analyses showed smaller and mostly linear associations: the best outcomes were generally observed at 26,000-33,000 total pulses, 1,300-1,800 pulses per session, 10-14 sessions, and 2.8-3.3 weeks of treatment. Conclusions: rTMS efficacy in MDE is maximized within a moderate dose range, beyond which additional stimulation yields minimal gain. Sustained remission likely depends on maintenance strategies, not dose escalation."
+    },
+    {
+      "id": "pmid:42000300",
+      "source": "pubmed",
+      "title": "Efficacy of high-definition transcranial direct current stimulation on craving in substance use disorders: a systematic review and meta-analysis",
+      "journal": "Journal of Addictive Diseases",
+      "authors": "Saha P, Muhammed JK, Sevda P, Verma R, Sarkar S",
+      "year": 2026,
+      "date": "2026-04-18",
+      "doi": "10.1080/10550887.2026.2658662",
+      "pmid": "42000300",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42000300/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "substance use disorder",
+        "craving"
+      ],
+      "abstract": "Background: High-definition transcranial direct current stimulation (HD-tDCS) offers more focal stimulation than conventional tDCS, but its efficacy for reducing craving in substance use disorders (SUD) has not been systematically reviewed. Methods: Five databases searched (PubMed, CENTRAL, EMBASE, Scopus, Google Scholar) from inception to April 2025. Included randomized controlled trials comparing HD-tDCS vs. sham reporting craving as outcome. Results: Three RCTs (n=138) met inclusion criteria; substances: opioid, cannabis, and methamphetamine use disorders. Pooled analysis demonstrated a moderate, statistically significant reduction in craving compared to sham with minimal heterogeneity. Conclusions: HD-tDCS intervention produced a moderate reduction in craving in substance use disorders (opioids, cannabis, methamphetamine) with favorable tolerability, but the small number of studies and limited sample sizes restrict generalizability."
+    },
+    {
+      "id": "pmid:42383744",
+      "source": "pubmed",
+      "title": "Repetitive Transcranial Magnetic Stimulation for Major Depressive Disorder: A Systematic Review and Network Meta-Analysis",
+      "journal": "Journal of Evidence-Based Medicine",
+      "authors": "Zhang et al.",
+      "year": 2026,
+      "date": "2026-07-01",
+      "doi": "10.1111/jebm.70155",
+      "pmid": "42383744",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42383744/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "Objective: To compare and rank the efficacy and acceptability of different repetitive transcranial magnetic stimulation (rTMS) modalities for major depressive disorder (MDD). Methods: Systematic review and network meta-analysis. Databases searched from inception to October 8, 2025: PubMed, Embase, Cochrane Library, Web of Science, CBM, CNKI, VIP, and Wanfang. Included randomized controlled trials investigating rTMS interventions for MDD. Results: Theta-burst stimulation (TBS) had the highest probability of being the most effective rTMS modality for depression, but confidence intervals overlapped across multiple comparisons, and effect sizes were modest. Conclusions: High-quality head-to-head trials are needed to confirm probabilistic rankings of rTMS modalities for MDD."
+    },
+    {
+      "id": "pmid:42620660",
+      "source": "pubmed",
+      "title": "Efficacy of intermittent theta-burst stimulation for substance use disorders: a systematic review and meta-analysis of randomized sham-controlled trials",
+      "journal": "Frontiers in Neurology",
+      "authors": null,
+      "year": 2026,
+      "date": "2026-07-14",
+      "doi": "10.3389/fneur.2026.1866761",
+      "pmid": "42620660",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42620660/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "addiction",
+        "substance use disorder",
+        "craving"
+      ],
+      "abstract": "Objective: To evaluate the efficacy of intermittent theta-burst stimulation (iTBS) for substance use disorders (SUDs), with craving reduction as the primary outcome and abstinence as the secondary outcome, and to examine whether treatment effects differed by substance type. Methods: Systematic review of randomized sham-controlled trials. Databases searched from inception to March 17, 2026. Results: Nine randomized sham-controlled trials involving 556 participants (eight trials, n=512 with continuous craving data). Active iTBS was associated with a reduction in craving relative to sham (SMD = -0.65, 95% CI: -1.08 to -0.21; p=0.003), but heterogeneity was substantial. Subgroup analyses showed a larger effect in methamphetamine use disorder and no detectable effect in nicotine use disorder. Conclusions: Prefrontal iTBS may reduce craving in methamphetamine use disorder, but overall evidence remains substance-specific and should not be interpreted as demonstrating efficacy across all SUDs."
+    },
+    {
+      "id": "pmid:41936982",
+      "source": "pubmed",
+      "title": "Efficacy and safety of transcranial direct current stimulation (tDCS) on treatment-resistant depression (TRD): A systematic review and Meta-analysis of randomized clinical trials",
+      "journal": "Journal of Affective Disorders",
+      "authors": null,
+      "year": 2026,
+      "date": "2026-08-01",
+      "doi": null,
+      "pmid": "41936982",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41936982/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "depression",
+        "treatment-resistant depression"
+      ],
+      "abstract": "Background: This systematic review and meta-analysis evaluates the effectiveness and safety of tDCS for treatment-resistant depression (TRD). Methods: Adhered to 2020 PRISMA guidelines; registered with PROSPERO (CRD42024606468). Included randomized clinical trials comparing active tDCS to sham in TRD. Results: Active tDCS significantly reduced depressive symptoms compared to sham (SMD: -1.17, 95% CI: -1.85 to -0.49; P<0.001). Significant outcome predictors: session number, age, male percentage, and duration. A follow-up analysis of delayed effects (30-day post-treatment) using four studies (154 participants) found no significant difference between active and sham tDCS (SMD: -0.12, 95% CI: -1.98 to 1.74; P=0.90). Conclusions: tDCS may provide modest short-term benefits in TRD, but findings were inconsistent, highly heterogeneous, and based on limited small trials. Standardized, large-scale studies with optimized protocols and longer follow-up are needed to confirm efficacy and safety."
+    },
+    {
+      "id": "pmid:42475940",
+      "source": "pubmed",
+      "title": "Prefrontal transcranial direct current stimulation in alcohol use disorder: a pilot randomized sham-controlled trial with exploratory effects on reward craving and depressive symptoms",
+      "journal": "Addictive Behaviors",
+      "authors": null,
+      "year": 2026,
+      "date": "2026-07-01",
+      "doi": "10.1016/j.addbeh.2026.108798",
+      "pmid": "42475940",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42475940/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "depression",
+        "addiction",
+        "craving"
+      ],
+      "abstract": "Background: Alcohol use disorder (AUD) remains a major public health challenge with limited pharmacological options. Transcranial direct current stimulation (tDCS) targeting the prefrontal cortex has shown promise for reducing craving in some substance use disorders. Methods: Randomized, double-blind pilot trial. 38 patients with AUD were assigned to active anodal tDCS over the dorsolateral prefrontal cortex or sham stimulation, plus standard care. Protocol: 1 mA for 20 minutes per session, followed by maintenance stimulation over 12 weeks. Primary outcomes: craving severity via Brief Substance Craving Scale (BSCS) and visual analog scale (VAS). Results: Active tDCS did not demonstrate superiority over sham on the registered craving outcomes. Exploratory analyses suggested possible differential effects on reward-related craving and depressive symptoms. Conclusions: This pilot RCT does not support the efficacy of prefrontal tDCS for craving in AUD on primary outcomes. Exploratory findings may guide future adequately-powered trials focusing on reward-related craving and comorbid depression."
+    }
+  ]
+}

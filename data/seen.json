@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute \u00e9tude d\u00e9j\u00e0 propos\u00e9e \u00e0 la veille (r\u00e9sum\u00e9e OU \u00e9cart\u00e9e) y figure et ne sera plus jamais re-propos\u00e9e. \u00c9crit par l'AGENT (pas par le script). Cl\u00e9 = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-09-14T10:00:00+00:00",
+  "last_run_utc": "2026-09-21T04:16:22Z",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -221,6 +221,41 @@
       "first_week": "2026-W38",
       "status": "ecarte",
       "title": "Repetitive transcranial magnetic stimulation: advances for psychiatric disorders"
+    },
+    "pmid:41674839": {
+      "first_week": "2026-W39",
+      "status": "resume",
+      "title": "Acute and long-term effects of repetitive transcranial magnetic stimulation in major depressive episodes: a systematic review and dose-response meta-analysis of randomized sham-controlled trials"
+    },
+    "doi:10.1038/s41380-025-03238-z": {
+      "first_week": "2026-W39",
+      "status": "resume",
+      "title": "Mapping symptom-general and symptom-specific targets for transcranial magnetic stimulation in schizophrenia: an electric-field modeling meta-analysis"
+    },
+    "pmid:42383744": {
+      "first_week": "2026-W39",
+      "status": "resume",
+      "title": "Repetitive Transcranial Magnetic Stimulation for Major Depressive Disorder: A Systematic Review and Network Meta-Analysis"
+    },
+    "pmid:41936982": {
+      "first_week": "2026-W39",
+      "status": "resume",
+      "title": "Efficacy and safety of transcranial direct current stimulation (tDCS) on treatment-resistant depression (TRD): A systematic review and Meta-analysis of randomized clinical trials"
+    },
+    "pmid:42620660": {
+      "first_week": "2026-W39",
+      "status": "resume",
+      "title": "Efficacy of intermittent theta-burst stimulation for substance use disorders: a systematic review and meta-analysis of randomized sham-controlled trials"
+    },
+    "pmid:42475940": {
+      "first_week": "2026-W39",
+      "status": "ecarte",
+      "title": "Prefrontal transcranial direct current stimulation in alcohol use disorder: a pilot randomized sham-controlled trial with exploratory effects on reward craving and depressive symptoms"
+    },
+    "pmid:42000300": {
+      "first_week": "2026-W39",
+      "status": "ecarte",
+      "title": "Efficacy of high-definition transcranial direct current stimulation on craving in substance use disorders: a systematic review and meta-analysis"
     }
   }
 }
