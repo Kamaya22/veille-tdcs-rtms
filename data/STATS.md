@@ -1,13 +1,13 @@
 # Statistiques de la veille tDCS / rTMS
 
-*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-09-14 04:33 UTC.*
+*Généré automatiquement par `tools/build_stats.py` — ne pas éditer à la main. Dernière génération : 2026-09-28 04:22 UTC.*
 
 ## Résumé
 
-- **Semaines de veille** : 7
-- **Études résumées (cumul)** : 30
-- **Revues distinctes** : 21
-- **Part accès ouvert** : 63.3 %
+- **Semaines de veille** : 8
+- **Études résumées (cumul)** : 35
+- **Revues distinctes** : 24
+- **Part accès ouvert** : 57.1 %
 
 ## Alertes / à vérifier
 
@@ -24,79 +24,81 @@
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| tDCS | 5 | 16.7 % | ███ |
-| rTMS | 25 | 83.3 % | █████████████████ |
+| tDCS | 9 | 25.7 % | █████ |
+| rTMS | 26 | 74.3 % | ███████████████ |
 
 ### Par indication
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| depression | 16 | 53.3 % | ███████████ |
-| schizophrenia | 7 | 23.3 % | █████ |
-| bipolar disorder | 2 | 6.7 % | █ |
-| anxiety | 2 | 6.7 % | █ |
-| bipolar-depression | 1 | 3.3 % | █ |
-| obsessive-compulsive disorder | 1 | 3.3 % | █ |
-| PTSD | 1 | 3.3 % | █ |
+| depression | 17 | 48.6 % | ██████████ |
+| schizophrenia | 9 | 25.7 % | █████ |
+| bipolar disorder | 2 | 5.7 % | █ |
+| anxiety | 2 | 5.7 % | █ |
+| bipolar-depression | 1 | 2.9 % | █ |
+| obsessive-compulsive disorder | 1 | 2.9 % | █ |
+| PTSD | 1 | 2.9 % | █ |
+| treatment-resistant depression | 1 | 2.9 % | █ |
+| substance use disorder | 1 | 2.9 % | █ |
 
 ### Par niveau de preuve
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| meta-analysis | 10 | 33.3 % | ███████ |
-| rct | 10 | 33.3 % | ███████ |
-| cohort | 5 | 16.7 % | ███ |
-| systematic-review | 2 | 6.7 % | █ |
-| primary-study | 1 | 3.3 % | █ |
-| to-verify | 1 | 3.3 % | █ |
-| trial-protocol | 1 | 3.3 % | █ |
+| meta-analysis | 12 | 34.3 % | ███████ |
+| rct | 12 | 34.3 % | ███████ |
+| cohort | 5 | 14.3 % | ███ |
+| systematic-review | 3 | 8.6 % | ██ |
+| primary-study | 1 | 2.9 % | █ |
+| to-verify | 1 | 2.9 % | █ |
+| trial-protocol | 1 | 2.9 % | █ |
 
 ### Par source
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| pubmed | 30 | 100.0 % | ████████████████████ |
+| pubmed | 35 | 100.0 % | ████████████████████ |
 
 ### Par accès
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| open | 19 | 63.3 % | █████████████ |
-| paywall | 9 | 30.0 % | ██████ |
-| unknown | 2 | 6.7 % | █ |
+| open | 20 | 57.1 % | ███████████ |
+| paywall | 13 | 37.1 % | ███████ |
+| unknown | 2 | 5.7 % | █ |
 
 ### Par relecture
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| revu par les pairs | 30 | 100.0 % | ████████████████████ |
+| revu par les pairs | 35 | 100.0 % | ████████████████████ |
 
 ### Par année
 
 | Valeur | Études | Part | |
 |---|---:|---:|---|
-| 2026 | 24 | 80.0 % | ████████████████ |
-| 2025 | 6 | 20.0 % | ████ |
+| 2026 | 29 | 82.9 % | █████████████████ |
+| 2025 | 6 | 17.1 % | ███ |
 
 ## Revues les plus citées (top 15)
 
 | Revue | Études | Part |
 |---|---:|---:|
-| Frontiers in Psychiatry | 4 | 13.3 % |
-| European Psychiatry | 3 | 10.0 % |
-| Transcranial Magnetic Stimulation | 2 | 6.7 % |
-| Journal of Affective Disorders | 2 | 6.7 % |
-| Molecular Psychiatry | 2 | 6.7 % |
-| Neuroscience & Biobehavioral Reviews | 2 | 6.7 % |
-| Acta Psychiatrica Scandinavica | 1 | 3.3 % |
-| The Cerebellum | 1 | 3.3 % |
-| Cell Reports Medicine | 1 | 3.3 % |
-| The Lancet Psychiatry | 1 | 3.3 % |
-| Quality of Life Research | 1 | 3.3 % |
-| Frontiers in Neuroscience | 1 | 3.3 % |
-| Biological Psychiatry Global Open Science | 1 | 3.3 % |
-| PLOS ONE | 1 | 3.3 % |
-| JAMA Network Open | 1 | 3.3 % |
+| Frontiers in Psychiatry | 4 | 11.4 % |
+| European Psychiatry | 3 | 8.6 % |
+| Journal of Affective Disorders | 3 | 8.6 % |
+| Molecular Psychiatry | 3 | 8.6 % |
+| Transcranial Magnetic Stimulation | 2 | 5.7 % |
+| Neuroscience & Biobehavioral Reviews | 2 | 5.7 % |
+| Acta Psychiatrica Scandinavica | 1 | 2.9 % |
+| The Cerebellum | 1 | 2.9 % |
+| Cell Reports Medicine | 1 | 2.9 % |
+| The Lancet Psychiatry | 1 | 2.9 % |
+| Quality of Life Research | 1 | 2.9 % |
+| Frontiers in Neuroscience | 1 | 2.9 % |
+| Biological Psychiatry Global Open Science | 1 | 2.9 % |
+| PLOS ONE | 1 | 2.9 % |
+| JAMA Network Open | 1 | 2.9 % |
 
 ## Évolution hebdomadaire
 
@@ -109,3 +111,4 @@
 | 2026-W31 | 2 | 2 |
 | 2026-W32 | 4 | 4 |
 | 2026-W38 | 5 | 5 |
+| 2026-W40 | 5 | 5 |
