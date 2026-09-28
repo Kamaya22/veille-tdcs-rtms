@@ -1,0 +1,60 @@
+{
+  "week": "2026-W40",
+  "reported": [
+    {
+      "id": "pmid:41936982",
+      "venue_id": "journal-affective-disorders",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "treatment-resistant depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41411709",
+      "venue_id": "psychiatry-research",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42032975",
+      "venue_id": "schizophrenia-bulletin",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42000300",
+      "venue_id": "journal-addictive-diseases",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "substance use disorder",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42629380",
+      "venue_id": "molecular-psychiatry",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}
