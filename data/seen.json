@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-09-28T04:14:16+00:00",
+  "last_run_utc": "2026-10-05T08:30:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -256,6 +256,56 @@
       "first_week": "2026-W40",
       "status": "ecarte",
       "title": "Working-memory effects of prefrontal tDCS across baseline cognitive-severity groups in schizophrenia: A secondary analysis of a randomized double-blind sham-controlled trial"
+    },
+    "pmid:42508605": {
+      "first_week": "2026-W41",
+      "status": "resume",
+      "title": "Accelerated intermittent theta-burst stimulation for major depressive episodes: systematic review and dose-response meta-analysis"
+    },
+    "doi:10.1038/s44220-026-00590-z": {
+      "first_week": "2026-W41",
+      "status": "resume",
+      "title": "Transcranial electrical stimulation for obsessive-compulsive disorder: a triple meta-analysis of efficacy, moderators, and optimal parameters"
+    },
+    "pmid:42581396": {
+      "first_week": "2026-W41",
+      "status": "resume",
+      "title": "Individualized Connectivity-Guided Versus Conventional Targeting of Accelerated Theta-Burst Stimulation in Depression: A Three-Arm Randomized Controlled Trial"
+    },
+    "pmid:41448837": {
+      "first_week": "2026-W41",
+      "status": "resume",
+      "title": "Combined repetitive transcranial magnetic stimulation and transcranial direct current stimulation for major depressive disorder with comorbid anxiety: a randomized controlled trial"
+    },
+    "pmid:42526755": {
+      "first_week": "2026-W41",
+      "status": "resume",
+      "title": "Personalized transcranial magnetic stimulation targeting the dorsomedial prefrontal cortex for social cognition deficits in schizophrenia spectrum disorders: a randomized controlled trial"
+    },
+    "pmid:41190303": {
+      "first_week": "2026-W41",
+      "status": "ecarte",
+      "title": "Repetitive transcranial magnetic stimulation combined with transcranial direct current stimulation for adolescent treatment-resistant depression: a randomized pilot trial"
+    },
+    "pmid:42331999": {
+      "first_week": "2026-W41",
+      "status": "ecarte",
+      "title": "Transcranial direct current stimulation for adolescent depression: a feasibility and preliminary efficacy randomized sham-controlled trial"
+    },
+    "pmid:41530140": {
+      "first_week": "2026-W41",
+      "status": "ecarte",
+      "title": "Comparative effects of transcranial direct current stimulation and transcranial random noise stimulation on cognitive symptoms in male patients with schizophrenia: a crossover trial"
+    },
+    "pmid:41770123": {
+      "first_week": "2026-W41",
+      "status": "ecarte",
+      "title": "Transcranial direct current stimulation targeting the anterior cingulate for life engagement in schizophrenia: a randomized sham-controlled pilot study"
+    },
+    "pmid:42285955": {
+      "first_week": "2026-W41",
+      "status": "ecarte",
+      "title": "Prefrontal tDCS modulates dopaminergic pathways and enhances cognition in schizophrenia: secondary analysis of a randomized controlled trial"
     }
   }
 }

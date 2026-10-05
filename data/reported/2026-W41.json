@@ -1,0 +1,60 @@
+{
+  "week": "2026-W41",
+  "reported": [
+    {
+      "id": "pmid:42508605",
+      "venue_id": "brain-stimulation",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1038/s44220-026-00590-z",
+      "venue_id": "nature-mental-health",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "OCD",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42581396",
+      "venue_id": "american-journal-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41448837",
+      "venue_id": "bmj-mental-health",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2025
+    },
+    {
+      "id": "pmid:42526755",
+      "venue_id": "brain-stimulation",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    }
+  ]
+}
