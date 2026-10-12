@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-10-05T08:30:00+00:00",
+  "last_run_utc": "2026-10-12T08:00:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -306,6 +306,41 @@
       "first_week": "2026-W41",
       "status": "ecarte",
       "title": "Prefrontal tDCS modulates dopaminergic pathways and enhances cognition in schizophrenia: secondary analysis of a randomized controlled trial"
+    },
+    "pmid:42383744": {
+      "first_week": "2026-W42",
+      "status": "resume",
+      "title": "Repetitive Transcranial Magnetic Stimulation for Major Depressive Disorder: A Systematic Review and Network Meta-Analysis"
+    },
+    "pmid:41137879": {
+      "first_week": "2026-W42",
+      "status": "resume",
+      "title": "Efficacy and safety of repetitive transcranial magnetic stimulation in youth with depression: a systematic review and meta-analysis of randomized sham-controlled trials"
+    },
+    "pmid:42605393": {
+      "first_week": "2026-W42",
+      "status": "resume",
+      "title": "Evaluating the Efficacy of Repetitive Transcranial Magnetic Stimulation (rTMS) on Craving Reduction and Relapse Prevention in Alcohol and Opioid Use Disorders: A Randomised Controlled Trial"
+    },
+    "pmid:41890346": {
+      "first_week": "2026-W42",
+      "status": "resume",
+      "title": "Assessing the efficacy and safety of rTMS, tDCS, and DBS in treating auditory hallucinations: a scoping review"
+    },
+    "pmid:42223086": {
+      "first_week": "2026-W42",
+      "status": "resume",
+      "title": "Repetitive Transcranial Magnetic Stimulation (rTMS) for Adolescent Depression: A Systematic Review and Meta-Analysis of Treatment Response and Suicidal Ideation Reduction"
+    },
+    "pmid:42429273": {
+      "first_week": "2026-W42",
+      "status": "ecarte",
+      "title": "Remission, Relapse, and Rapid Re-Response With Accelerated Transcranial Direct Current Stimulation (tDCS) in Obsessive-Compulsive Disorder: Longitudinal Course With Implications for Durability and Maintenance Strategies"
+    },
+    "pmid:41583527": {
+      "first_week": "2026-W42",
+      "status": "ecarte",
+      "title": "RTMS Versus Fluvoxamine in the Treatment of OCD: A Randomized Open-label Pilot Study"
     }
   }
 }

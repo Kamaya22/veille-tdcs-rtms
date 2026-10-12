@@ -1,0 +1,60 @@
+{
+  "week": "2026-W42",
+  "reported": [
+    {
+      "id": "pmid:42383744",
+      "venue_id": "journal-of-evidence-based-medicine",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41137879",
+      "venue_id": "world-journal-pediatrics",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2025
+    },
+    {
+      "id": "pmid:42605393",
+      "venue_id": "nigerian-medical-journal",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "addiction",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41890346",
+      "venue_id": "frontiers-in-human-neuroscience",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "pmid:42223086",
+      "venue_id": "acta-psychiatrica-scandinavica",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    }
+  ]
+}

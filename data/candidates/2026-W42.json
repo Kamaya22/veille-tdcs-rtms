@@ -1,0 +1,208 @@
+{
+  "week": "2026-W42",
+  "generated_utc": "2026-10-12T04:13:14.801374+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-10-04",
+    "to": "2026-10-12",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 7,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 7,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 7
+  },
+  "studies": [
+    {
+      "id": "pmid:41137879",
+      "source": "pubmed",
+      "title": "Efficacy and safety of repetitive transcranial magnetic stimulation in youth with depression: a systematic review and meta-analysis of randomized sham-controlled trials",
+      "journal": "World Journal of Pediatrics",
+      "authors": "et al.",
+      "year": 2025,
+      "date": "2025-09-01",
+      "doi": "10.1007/s12519-025-00983-7",
+      "pmid": "41137879",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41137879/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression"
+      ],
+      "abstract": "This systematic review and meta-analysis of randomized sham-controlled trials evaluated the efficacy and safety of repetitive transcranial magnetic stimulation (rTMS) in youth with depression (aged 10-25 years). Sixteen randomized sham-controlled trials with 1295 patients were included. Active rTMS significantly reduced depression scale scores compared to sham (SMD = -0.93, 95% CI: -1.31 to -0.55). Significant effects were observed at the second week (SMD = -0.66, 95% CI: -1.25 to -0.07) and persisted at the fourth week (SMD = -1.28, 95% CI: -1.82 to -0.75). Pooled response rate ratio was 1.24 (95% CI: 1.06-1.45) and remission rate ratio was 1.63 (95% CI: 1.11-2.39), with a number needed to treat (NNT) of 10. rTMS was well-tolerated with mild, transient adverse effects. All included studies were conducted in China, limiting generalizability. The authors conclude that rTMS is effective, safe, and relatively fast-acting in youth depression, while calling for larger-scale studies with longer treatment durations and extended follow-up."
+    },
+    {
+      "id": "pmid:41890346",
+      "source": "pubmed",
+      "title": "Assessing the efficacy and safety of rTMS, tDCS, and DBS in treating auditory hallucinations: a scoping review",
+      "journal": "Frontiers in Human Neuroscience",
+      "authors": "Wang J",
+      "year": 2026,
+      "date": "2026-03-11",
+      "doi": "10.3389/fnhum.2026.1769095",
+      "pmid": "41890346",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41890346/",
+      "publication_types": [
+        "Systematic Review",
+        "Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS",
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "psychosis",
+        "auditory hallucinations"
+      ],
+      "abstract": "This scoping review assessed the efficacy and safety of repetitive transcranial magnetic stimulation (rTMS), transcranial direct current stimulation (tDCS), and deep brain stimulation (DBS) for treating auditory hallucinations (AH). Fifty-six articles were included. Non-invasive neuromodulation (rTMS, tDCS) remains the primary clinical focus for AH, with rTMS described as moderately efficacious and carrying higher upfront costs. A sham-controlled trial of tDCS in AH reported a statistically significant 30% reduction in AH severity in the active group (12 verum, 13 sham). DBS was classified as experimental given significant surgical risks, unresolved ethical complexities, target uncertainty, and limited clinical evidence. The review identified lack of coherent reporting of patient-level characteristics, such as past medical history and comorbidities, as a key gap. Low-frequency rTMS targeting the temporoparietal junction (TPJ) may reduce the severity of auditory hallucinations. The review offers a comparison of the risks, strengths, and practical feasibility of the three methods and provides directions for future research."
+    },
+    {
+      "id": "pmid:42223086",
+      "source": "pubmed",
+      "title": "Repetitive Transcranial Magnetic Stimulation (rTMS) for Adolescent Depression: A Systematic Review and Meta-Analysis of Treatment Response and Suicidal Ideation Reduction",
+      "journal": "Acta Psychiatrica Scandinavica",
+      "authors": "Rakic et al.",
+      "year": 2026,
+      "date": "2026-06-01",
+      "doi": "10.1111/acps.70110",
+      "pmid": "42223086",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42223086/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression"
+      ],
+      "abstract": "This systematic review and meta-analysis evaluated treatment response and suicidal ideation reduction following rTMS in adolescents with depression. Nineteen studies from 687 screened records were included. The pooled within-group standardized mean change (SMC) in depression severity pre-post was -2.15 (95% CI: -2.58 to -1.73) with high heterogeneity (I²=87%). For RCT-only studies, the pooled SMC was -0.90 (95% CI: -1.90 to 0.11), which did not reach statistical significance. The pooled response rate was 54% (95% CI: 42%-66%, I²=82%). For suicidal ideation, the pooled SMC was -2.78 (not significant, 95% CI: -5.98 to 0.42), based on only 3 studies. Adverse effects were mild and transient. The majority of studies were rated as having high risk of bias. The authors conclude that rTMS appears effective and well-tolerated in adolescents with MDD, but the evidence base requires more rigorous randomized trials given high heterogeneity, bias risk, and inclusion of uncontrolled studies. rTMS may also show promise for suicidal ideation but evidence remains limited."
+    },
+    {
+      "id": "pmid:42383744",
+      "source": "pubmed",
+      "title": "Repetitive Transcranial Magnetic Stimulation for Major Depressive Disorder: A Systematic Review and Network Meta-Analysis",
+      "journal": "Journal of Evidence-Based Medicine",
+      "authors": "Zhang Y, et al.",
+      "year": 2026,
+      "date": "2026-07-01",
+      "doi": "10.1111/jebm.70155",
+      "pmid": "42383744",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42383744/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis",
+        "Network Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "This systematic review and network meta-analysis compared and ranked the efficacy and acceptability of different repetitive transcranial magnetic stimulation (rTMS) modalities for major depressive disorder (MDD). We included 141 randomized controlled trials with 10,587 participants. Primary outcomes were efficacy (response rate) and acceptability (dropout rate), with remission as a secondary outcome. Certainty of evidence was graded using the CINeMA framework. Theta-burst stimulation (TBS) had the highest probability of being the most effective rTMS modality. However, confidence intervals overlapped across multiple comparisons, and the certainty of evidence was rated low to very low for most comparisons. The authors call for high-quality head-to-head randomized controlled trials to confirm the rankings. The results suggest that TBS may represent a more efficacious option than conventional high- or low-frequency rTMS, but the evidence remains insufficient for definitive clinical recommendations."
+    },
+    {
+      "id": "pmid:41583527",
+      "source": "pubmed",
+      "title": "RTMS Versus Fluvoxamine in the Treatment of OCD: A Randomized Open-label Pilot Study",
+      "journal": "International Journal of Medical Sciences",
+      "authors": "et al.",
+      "year": 2026,
+      "date": "2026-01-01",
+      "doi": null,
+      "pmid": "41583527",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41583527/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "obsessive-compulsive disorder",
+        "OCD"
+      ],
+      "abstract": "This randomized open-label pilot study compared repetitive transcranial magnetic stimulation (rTMS) versus fluvoxamine in treatment-naive patients with obsessive-compulsive disorder (OCD). Forty-one treatment-naive OCD patients were randomized to receive either standardized fluvoxamine therapy (150-200 mg/day) or daily low-frequency (1 Hz) rTMS targeting the supplementary motor area (SMA) for 2 weeks. The primary endpoint was a Yale-Brown Obsessive-Compulsive Scale (Y-BOCS) score reduction of ≥25%. Response was observed in 5 of 12 patients (41.7%) in the rTMS arm and 6 of 10 patients (60%) in the fluvoxamine arm; the difference was not statistically significant (chi-square = 0.183, p = 0.669). The authors conclude that low-frequency rTMS over the SMA might have preliminary positive outcomes for treatment-naive OCD patients, while calling for larger randomized double-blind sham-controlled multicenter trials with extended follow-up. The open-label design and small sample limit conclusions."
+    },
+    {
+      "id": "pmid:42605393",
+      "source": "pubmed",
+      "title": "Evaluating the Efficacy of Repetitive Transcranial Magnetic Stimulation (rTMS) on Craving Reduction and Relapse Prevention in Alcohol and Opioid Use Disorders: A Randomised Controlled Trial",
+      "journal": "Nigerian Medical Journal",
+      "authors": "et al.",
+      "year": 2026,
+      "date": "2026-07-10",
+      "doi": null,
+      "pmid": "42605393",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42605393/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "addiction",
+        "substance use disorder",
+        "craving"
+      ],
+      "abstract": "This double-blind, sham-controlled randomized controlled trial evaluated the efficacy of repetitive transcranial magnetic stimulation (rTMS) on craving reduction and relapse prevention in 300 adults with alcohol use disorder (AUD) or opioid use disorder (OUD) at a rehabilitation clinic in Kaduna, Nigeria. Participants were randomized to active or sham rTMS groups; all received standard cognitive-behavioural therapy. The active group underwent 20 sessions of 10 Hz high-frequency rTMS over the left dorsolateral prefrontal cortex (DLPFC). Craving was assessed with the Visual Analog Scale and the Obsessive Compulsive Drug Use Scale. Primary outcomes included craving scores and relapse rates at 3, 6, and 12-month follow-ups. Active rTMS produced significantly greater craving reduction versus sham at all assessment points. The authors report robust and sustained reductions in craving and relapse over 12 months for patients with AUD and OUD receiving adjunctive high-frequency rTMS. The trial was conducted at a single site in Nigeria."
+    },
+    {
+      "id": "pmid:42429273",
+      "source": "pubmed",
+      "title": "Remission, Relapse, and Rapid Re-Response With Accelerated Transcranial Direct Current Stimulation (tDCS) in Obsessive-Compulsive Disorder: Longitudinal Course With Implications for Durability and Maintenance Strategies",
+      "journal": "Journal of ECT",
+      "authors": "Singh S, et al.",
+      "year": 2026,
+      "date": "2026-07-10",
+      "doi": "10.1097/YCT.0000000000001289",
+      "pmid": "42429273",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42429273/",
+      "publication_types": [
+        "Journal Article"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "obsessive-compulsive disorder",
+        "OCD"
+      ],
+      "abstract": "This study describes the longitudinal course of patients with obsessive-compulsive disorder (OCD) following accelerated transcranial direct current stimulation (tDCS), examining patterns of remission, relapse, and rapid re-response. The report documents the trajectory of OCD patients who initially achieved remission with accelerated tDCS and later relapsed, assessing whether rapid re-response occurs upon retreatment. The findings address durability and maintenance strategies following accelerated tDCS in OCD, with implications for clinical planning. The triple meta-analysis on transcranial electrical stimulation (tES) for OCD published in Nature Mental Health is referenced as supporting context. The work contributes longitudinal data on tDCS as a neuromodulation approach for OCD, highlighting the need for maintenance protocols to sustain initial treatment gains."
+    }
+  ]
+}
