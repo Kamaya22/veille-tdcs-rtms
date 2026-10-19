@@ -1,0 +1,28 @@
+{
+  "week": "2026-W43",
+  "generated_utc": "2026-10-19T04:22:33+00:00",
+  "studies": [
+    {
+      "id": "doi:10.1176/appi.ajp.20260398",
+      "venue_id": "american-journal-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "treatment-resistant depression",
+      "evidence_type": "observational-IPD",
+      "peer_reviewed": true,
+      "open_access": false,
+      "year": 2026
+    },
+    {
+      "id": "pmid:41721017",
+      "venue_id": "neuropsychopharmacology",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "major depressive disorder",
+      "evidence_type": "RCT",
+      "peer_reviewed": true,
+      "open_access": false,
+      "year": 2026
+    }
+  ]
+}

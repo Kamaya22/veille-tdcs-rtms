@@ -1,0 +1,105 @@
+{
+  "week": "2026-W43",
+  "generated_utc": "2026-10-19T04:23:00.364557+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-10-11",
+    "to": "2026-10-19",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 3,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 3,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 3
+  },
+  "studies": [
+    {
+      "id": "pmid:41721017",
+      "source": "pubmed",
+      "title": "Task-guided accelerated cTBS simultaneously treats depression and social dysfunction in patients with major depressive disorder: a randomized clinical trial",
+      "journal": "Neuropsychopharmacology",
+      "authors": "Jin Y, Chen X et al.",
+      "year": 2026,
+      "date": "2026-02-01",
+      "doi": "10.1038/s41386-026-02365-7",
+      "pmid": "41721017",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41721017/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "anxiety"
+      ],
+      "abstract": "Current antidepressant therapies predominantly target symptom remission in major depressive disorder (MDD) but often overlook social dysfunction. This randomized, double-blind, sham-controlled trial tested task-guided individualized accelerated continuous theta burst stimulation (cTBS) targeting the right dorsolateral prefrontal cortex (R-DLPFC), with optimal stimulation sites determined by task-evoked brain activation during an Ultimatum Game paradigm. Seventy patients with MDD were randomized to active cTBS (n=37) or sham cTBS (n=33) over 2 weeks. Active accelerated cTBS significantly outperformed sham in reducing depressive symptoms, anxiety symptoms, and improving general social functioning (all ps < 0.001). The active group showed enhanced cooperation behavior (p=0.002) and increased learning rates during the Ultimatum Game task. Effective connectivity changes were observed among the DLPFC, insula, and anterior cingulate cortex. No severe adverse events occurred. Registration: ChiCTR2300068273."
+    },
+    {
+      "id": "doi:10.1038/s41598-026-56839-1",
+      "source": "pubmed",
+      "title": "Feasibility and safety of transcranial direct current stimulation (tDCS) in adolescent inpatients with depression: a randomized, double-blind, sham-controlled trial",
+      "journal": "Scientific Reports",
+      "authors": "et al.",
+      "year": 2026,
+      "date": "2026-06-22",
+      "doi": "10.1038/s41598-026-56839-1",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s41598-026-56839-1",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "A feasibility randomized, double-blind, sham-controlled trial of transcranial direct current stimulation (tDCS) in 34 adolescent inpatients with depression (mean age 15.48 years). Participants received ten sessions of active tDCS or sham stimulation over two weeks alongside standard treatment. Primary outcomes: feasibility and safety. Both groups showed significant improvement in depressive symptoms, but there was no significant difference between active tDCS and sham. The treatment was feasible and well-tolerated; 28 patients completed at least eight sessions. Side effects were primarily mild to moderate and no sessions were interrupted due to discomfort. The authors conclude that tDCS was safe and feasible in this population but could not demonstrate superiority to sham treatment, calling for larger trials."
+    },
+    {
+      "id": "doi:10.1176/appi.ajp.20260398",
+      "source": "pubmed",
+      "title": "Effectiveness of rTMS vs. Pharmacotherapy in Late-Life Treatment-Resistant Depression: An Observational Study of Individual Participant Data From Two Randomized Clinical Trials",
+      "journal": "American Journal of Psychiatry",
+      "authors": "Adler S et al.",
+      "year": 2026,
+      "date": "2026-10-14",
+      "doi": "10.1176/appi.ajp.20260398",
+      "pmid": null,
+      "nct": null,
+      "url": "https://psychiatryonline.org/doi/abs/10.1176/appi.ajp.20260398",
+      "publication_types": [
+        "Observational Study",
+        "Comparative Effectiveness Research"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "OBJECTIVE: To compare the effectiveness of repetitive transcranial magnetic stimulation (rTMS) versus pharmacotherapy strategies in late-life treatment-resistant depression (TRD) using individual participant data from two randomized clinical trials. METHODS: Individual participant data from the FOUR-D trial (high-frequency rTMS; participants aged ≥60 with TRD) and the OPTIMUM trial (pharmacotherapy: aripiprazole augmentation, bupropion augmentation, lithium augmentation/antidepressant switch) were pooled. A total of 758 adults aged ≥60 years with TRD were included. Primary outcome: MADRS score at 10 weeks. Multivariable regression with propensity score adjustment was used. RESULTS: rTMS was associated with significantly lower MADRS scores at 10 weeks compared to aripiprazole augmentation (difference: 4.16 points; 95% CI 2.32–6.00), bupropion augmentation (difference: 6.08; 95% CI 4.06–8.09), and switch to new antidepressant. Response rates were higher with rTMS: adjusted odds ratio (AOR) vs. aripiprazole augmentation: 3.83 (95% CI 1.08–13.56); vs. bupropion augmentation: AOR=4.87. Headache rates were higher with rTMS versus all comparators. CONCLUSIONS: In this observational cross-trial comparison, rTMS was associated with superior effectiveness compared to pharmacotherapy augmentation strategies in late-life TRD, supporting its use in elderly patients."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-10-12T08:00:00+00:00",
+  "last_run_utc": "2026-10-19T04:22:33+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -341,6 +341,21 @@
       "first_week": "2026-W42",
       "status": "ecarte",
       "title": "RTMS Versus Fluvoxamine in the Treatment of OCD: A Randomized Open-label Pilot Study"
+    },
+    "doi:10.1176/appi.ajp.20260398": {
+      "first_week": "2026-W43",
+      "status": "resume",
+      "title": "Effectiveness of rTMS vs. Pharmacotherapy in Late-Life Treatment-Resistant Depression: An Observational Study of Individual Participant Data From Two Randomized Clinical Trials"
+    },
+    "pmid:41721017": {
+      "first_week": "2026-W43",
+      "status": "resume",
+      "title": "Task-guided accelerated cTBS simultaneously treats depression and social dysfunction in patients with major depressive disorder: a randomized clinical trial"
+    },
+    "doi:10.1038/s41598-026-56839-1": {
+      "first_week": "2026-W43",
+      "status": "ecarte",
+      "title": "Feasibility and safety of transcranial direct current stimulation (tDCS) in adolescent inpatients with depression: a randomized, double-blind, sham-controlled trial"
     }
   }
 }
