@@ -1,0 +1,158 @@
+{
+  "week": "2026-W44",
+  "generated_utc": "2026-10-26T04:28:06.655064+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-10-18",
+    "to": "2026-10-26",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 5,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 5,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 5
+  },
+  "studies": [
+    {
+      "id": "doi:10.1001/jamanetworkopen.2026.39400",
+      "source": "pubmed",
+      "title": "Home Transcranial Direct Current Stimulation With Gamified Cognitive Control Training for Depression: A Randomized Clinical Trial",
+      "journal": "JAMA Network Open",
+      "authors": "Dechantsreiter E, Padberg F, Benjamini Y, et al.",
+      "year": 2026,
+      "date": "2026-10-19",
+      "doi": "10.1001/jamanetworkopen.2026.39400",
+      "pmid": null,
+      "nct": null,
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2855475",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder"
+      ],
+      "abstract": "In a 109-person randomized trial, adults with major depressive disorder received home-based tDCS (2 mA, 30 min, 5 sessions/week for 5 weeks) combined with gamified cognitive control training (active arm, n=55) versus a matched control condition (n=54). The primary outcome was MADRS change at week 6. Score change was -7.3 (active) vs -8.2 (control), with a between-group difference of 0.89 (95% CI -1.37 to 3.15; P=.44). BDI-II difference was also non-significant at 1.6 (95% CI -1.14 to 4.35; P=.25). Both groups showed significant symptom reduction. The combined home-based tDCS plus gamified cognitive control training approach was feasible and well tolerated, but did not demonstrate additional clinical benefit over the control condition. The findings do not support the clinical use of home-based tDCS combined with gamified cognitive training as a standalone treatment for major depressive disorder."
+    },
+    {
+      "id": "doi:10.1001/jamanetworkopen.2026.36032",
+      "source": "pubmed",
+      "title": "Dorsolateral Prefrontal rTMS Symptom Cluster Response Trajectories for Depression",
+      "journal": "JAMA Network Open",
+      "authors": "Kaster TS, Chen X, Downar J, et al.",
+      "year": 2026,
+      "date": "2026-09-24",
+      "doi": "10.1001/jamanetworkopen.2026.36032",
+      "pmid": null,
+      "nct": null,
+      "url": "https://doi.org/10.1001/jamanetworkopen.2026.36032",
+      "publication_types": [
+        "Cohort Study"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression",
+        "anxiety"
+      ],
+      "abstract": "A cohort study using data from the THREE-D randomized trial applied group-based multitrajectory modeling to four HDRS-17 symptom clusters over 4 weeks of rTMS in 388 adults with major depressive disorder (18-65 years). Four trajectory groups emerged: optimal response (30.7%, n=119), partial response with high anxiety (33.0%, n=128), partial response with low anxiety (23.5%, n=91), and minimal response (12.9%, n=50). Baseline anxiety severity and benzodiazepine use were associated with trajectory membership. Approximately one-third of patients had optimal response across all symptom domains. The findings suggest that baseline anxiety predicts trajectory type and that personalized targeting based on symptom clusters may improve outcomes. Prospective studies are needed to validate these trajectory profiles."
+    },
+    {
+      "id": "doi:10.1176/appi.ajp.20260398",
+      "source": "pubmed",
+      "title": "Effectiveness of rTMS vs. Pharmacotherapy in Late-Life Treatment-Resistant Depression: An Observational Study of Individual Participant Data From Two Randomized Clinical Trials",
+      "journal": "American Journal of Psychiatry",
+      "authors": "Adler S, Blumberger DM, Lenze EJ, et al.",
+      "year": 2026,
+      "date": "2026-10-14",
+      "doi": "10.1176/appi.ajp.20260398",
+      "pmid": null,
+      "nct": null,
+      "url": "https://psychiatryonline.org/doi/10.1176/appi.ajp.20260398",
+      "publication_types": [
+        "Observational Study"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "Using individual participant data from 758 adults aged 60 or older with late-life treatment-resistant depression (failed ≥2 adequate antidepressant trials) drawn from two separate randomized clinical trials, the authors used restriction, propensity score weighting, and regression adjustment to compare rTMS versus pharmacotherapy. After adjustment, rTMS was associated with lower MADRS scores at 10 weeks compared with aripiprazole augmentation (difference: 4.16 points, 95% CI 2.32-6.00), bupropion augmentation (6.08 points, 95% CI 4.06-8.09), and switching to bupropion (6.36 points, 95% CI 4.55-8.17). Response was 4 to 5 times more likely with rTMS. Because this was an observational comparison across two separate trials rather than a randomized head-to-head comparison, residual confounding from between-trial differences remains possible."
+    },
+    {
+      "id": "doi:10.1038/s41380-026-03930-8",
+      "source": "pubmed",
+      "title": "Repetitive transcranial magnetic stimulation (rTMS) combined with antidepressant pharmacotherapy for depression: state-dependent mechanisms, clinical evidence, and translational challenges",
+      "journal": "Molecular Psychiatry",
+      "authors": "Jia Z, et al.",
+      "year": 2026,
+      "date": "2026-10-18",
+      "doi": "10.1038/s41380-026-03930-8",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s41380-026-03930-8",
+      "publication_types": [
+        "Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "This review examines the combination of rTMS with antidepressant pharmacotherapy for depression. The interaction is framed as state-dependent, shaped by medication class, stimulation protocol and timing, cortical excitability, metaplasticity, and individual neurobiology. The authors argue against treating the combination as simply additive. Combined treatment may speed early improvement and raise response and remission rates in depression, though these benefits are heterogeneous across patients and symptom domains. The review covers mechanisms including effects on monoamine signaling, synaptic plasticity, and distributed networks, and discusses biomarker-, state-, and symptom-informed targeting, treatment sequencing, and implementation strategies for real-world practice."
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1924135",
+      "source": "pubmed",
+      "title": "Real-world outcomes of rTMS for treatment-resistant depression: a retrospective single-center study",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "[auteurs non identifiés, Institute of Mental Health, Singapore]",
+      "year": 2026,
+      "date": "2026-10-19",
+      "doi": "10.3389/fpsyt.2026.1924135",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1924135/full",
+      "publication_types": [
+        "Observational Study",
+        "Retrospective Study"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "A retrospective study of 28 outpatients with treatment-resistant depression who received rTMS at a single center in Singapore between May 2022 and May 2025. Patients received 10 Hz high-frequency or intermittent theta-burst rTMS targeting the left dorsolateral prefrontal cortex (F3 scalp position). The response rate was 67.9% and remission rate was 57.1%. Mean MADRS score decreased from 29.6 to 13.9 (p<0.001). A total of 85.7% of patients had previously failed at least three antidepressant classes. The study is limited by its retrospective design, small sample (n=28), and lack of a control group."
+    }
+  ]
+}

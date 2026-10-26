@@ -1,0 +1,61 @@
+{
+  "week": "2026-W44",
+  "generated_utc": "2026-10-26T05:00:00+00:00",
+  "studies": [
+    {
+      "id": "doi:10.1176/appi.ajp.20260398",
+      "venue_id": "american-journal-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "treatment-resistant depression",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1001/jamanetworkopen.2026.39400",
+      "venue_id": "jama-network-open",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "major depressive disorder",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1001/jamanetworkopen.2026.36032",
+      "venue_id": "jama-network-open",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "major depressive disorder",
+      "evidence_type": "cohort",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1038/s41380-026-03930-8",
+      "venue_id": "molecular-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "major depressive disorder",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1924135",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "treatment-resistant depression",
+      "evidence_type": "case-series",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}
