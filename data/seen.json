@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-10-12T08:00:00+00:00",
+  "last_run_utc": "2026-11-02T04:30:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -341,6 +341,41 @@
       "first_week": "2026-W42",
       "status": "ecarte",
       "title": "RTMS Versus Fluvoxamine in the Treatment of OCD: A Randomized Open-label Pilot Study"
+    },
+    "pmid:42340706": {
+      "first_week": "2026-W45",
+      "status": "resume",
+      "title": "Connectivity- vs Scalp-Based Targeting of Accelerated Transcranial Magnetic Stimulation for Depression: A Randomized Clinical Trial"
+    },
+    "pmid:40522661": {
+      "first_week": "2026-W45",
+      "status": "resume",
+      "title": "Repetitive Transcranial Magnetic Stimulation as Maintenance Treatment of Depression: The MAINT-R Randomized Clinical Trial"
+    },
+    "pmid:41997374": {
+      "first_week": "2026-W45",
+      "status": "resume",
+      "title": "Protocol-level moderators of antidepressant efficacy in prefrontal rTMS: A sham-controlled meta-analysis of randomized trials"
+    },
+    "pmid:41513052": {
+      "first_week": "2026-W45",
+      "status": "resume",
+      "title": "Efficacy of non-invasive brain stimulation in treatment-resistant schizophrenia: A systematic review and network meta-analysis"
+    },
+    "doi:10.1007/s11126-026-10309-z": {
+      "first_week": "2026-W45",
+      "status": "resume",
+      "title": "Systematic Review of rTMS and dTMS in Treatment-Resistant Obsessive-Compulsive Disorder: Target- and Phenotype-Specific Outcomes"
+    },
+    "pmid:41210378": {
+      "first_week": "2026-W45",
+      "status": "ecarte",
+      "title": "Non-invasive brain stimulation augmentation therapy for treatment-resistant schizophrenia: a systematic review and network meta-analysis"
+    },
+    "doi:10.1038/s41380-026-03930-8": {
+      "first_week": "2026-W45",
+      "status": "ecarte",
+      "title": "Repetitive transcranial magnetic stimulation (rTMS) combined with antidepressant pharmacotherapy for depression: state-dependent mechanisms, clinical evidence, and translational challenges"
     }
   }
 }

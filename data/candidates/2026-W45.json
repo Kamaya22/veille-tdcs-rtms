@@ -1,0 +1,213 @@
+{
+  "week": "2026-W45",
+  "generated_utc": "2026-11-02T04:25:14.505436+00:00",
+  "collect_mode": "raw (WebFetch)",
+  "window": {
+    "from": "2026-10-25",
+    "to": "2026-11-02",
+    "days": 8
+  },
+  "sources_queried": [
+    "pubmed",
+    "medrxiv",
+    "clinicaltrials"
+  ],
+  "max_studies": 5,
+  "counts": {
+    "pubmed": 7,
+    "medrxiv": 0,
+    "clinicaltrials": 0,
+    "raw_total": 7,
+    "filtered_already_seen": 0,
+    "filtered_no_modality": 0,
+    "new_after_dedup": 7
+  },
+  "studies": [
+    {
+      "id": "pmid:41210378",
+      "source": "pubmed",
+      "title": "Non-invasive brain stimulation augmentation therapy for treatment-resistant schizophrenia: a systematic review and network meta-analysis",
+      "journal": "eClinicalMedicine",
+      "authors": "Wei Y, et al.",
+      "year": 2025,
+      "date": "2025-12-01",
+      "doi": "10.1016/j.eclinm.2025.103583",
+      "pmid": "41210378",
+      "nct": null,
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(25)00516-4/fulltext",
+      "publication_types": [
+        "Systematic Review",
+        "Network Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS",
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "auditory hallucinations",
+        "negative symptoms"
+      ],
+      "abstract": "This systematic review and network meta-analysis, described as the first NMA of RCTs comparing NIBS for treatment-resistant schizophrenia, searched PubMed up to April 2025. It covered rTMS, transcranial electrical stimulation (tES), electroconvulsive therapy (ECT), and magnetic seizure therapy (MST). The primary analysis showed that compared with sham, rTMS was more efficacious in improving overall symptoms, though this did not hold in sensitivity analyses excluding Chinese mainland studies. Low-frequency rTMS over the left temporoparietal junction significantly reduced positive symptoms and hallucinations. Neuronavigated cTBS-LTPC and iTBS-DLPFC improved negative and overall symptoms. All NIBS modalities were well tolerated, with dropout rates similar to sham."
+    },
+    {
+      "id": "pmid:41513052",
+      "source": "pubmed",
+      "title": "Efficacy of non-invasive brain stimulation in treatment-resistant schizophrenia: A systematic review and network meta-analysis",
+      "journal": "Neuroscience and Biobehavioral Reviews",
+      "authors": "Tsui HKH, Law WS, et al.",
+      "year": 2026,
+      "date": "2026-01-07",
+      "doi": "10.1016/j.neubiorev.2026.106549",
+      "pmid": "41513052",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41513052/",
+      "publication_types": [
+        "Systematic Review",
+        "Network Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "tDCS",
+        "rTMS"
+      ],
+      "indications": [
+        "schizophrenia",
+        "auditory hallucinations",
+        "negative symptoms"
+      ],
+      "abstract": "This systematic review and network meta-analysis, described as the first NMA comparing different non-invasive brain stimulation (NIBS) interventions for treatment-resistant schizophrenia, included data from 36 randomized controlled trials with 1,313 patients. Modalities analyzed included rTMS and transcranial electrical stimulation (tES). Low-frequency rTMS over the left temporoparietal junction (LF-rTMS-LTPJ) significantly reduced auditory hallucinations with an effect size of SMD = -0.784 (95% CI -1.202 to -0.366), though with high heterogeneity. Neuronavigated continuous theta burst stimulation of the left temporoparietal cortex (cTBS-LTPC) and intermittent TBS targeting the left dorsolateral prefrontal cortex (iTBS-DLPFC) were associated with superior improvement in negative symptoms and overall symptom severity compared to other modalities. All NIBS modalities were well tolerated, with dropout rates similar to sham. The authors concluded that LF-rTMS-LTPJ and neuronavigated cTBS-LTPC are the most evidence-supported approaches for treatment-resistant schizophrenia symptoms. Registered: PROSPERO CRD42023442563."
+    },
+    {
+      "id": "pmid:41997374",
+      "source": "pubmed",
+      "title": "Protocol-level moderators of antidepressant efficacy in prefrontal rTMS: A sham-controlled meta-analysis of randomized trials",
+      "journal": "Journal of Affective Disorders",
+      "authors": "Authors not retrieved",
+      "year": 2026,
+      "date": "2026-08-01",
+      "doi": "10.1016/j.jad.2026.121805",
+      "pmid": "41997374",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41997374/",
+      "publication_types": [
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "This sham-controlled meta-analysis pooled 30 randomized comparisons with 1,850 participants to evaluate prefrontal rTMS or theta-burst stimulation (TBS) in adults with major depressive disorder (MDD) or treatment-resistant depression (TRD). The analysis searched literature through January 2026. Active rTMS demonstrated a robust antidepressant effect over sham with a pooled Hedges' g of -1.06 (95% CI -1.41 to -0.70), though heterogeneity was high (I² = 84.6%). The 95% prediction interval ranged from -2.42 to +0.31. Meta-regression found no statistically significant linear dose-response relationships across stimulation parameters. The authors concluded that prefrontal rTMS robustly increases response and remission probability in MDD, but that optimal parameter selection cannot yet be determined from pooled data alone."
+    },
+    {
+      "id": "doi:10.1007/s11126-026-10309-z",
+      "source": "pubmed",
+      "title": "Systematic Review of rTMS and dTMS in Treatment-Resistant Obsessive-Compulsive Disorder: Target- and Phenotype-Specific Outcomes",
+      "journal": "Psychiatric Quarterly",
+      "authors": "Martinez-Montero A, Romera-Gutierrez A, et al.",
+      "year": 2026,
+      "date": "2026-09-02",
+      "doi": "10.1007/s11126-026-10309-z",
+      "pmid": null,
+      "nct": null,
+      "url": "https://link.springer.com/article/10.1007/s11126-026-10309-z",
+      "publication_types": [
+        "Systematic Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "obsessive-compulsive disorder",
+        "OCD"
+      ],
+      "abstract": "This PRISMA-compliant systematic review (PROSPERO: CRD420251003027) searched PubMed and ProQuest (January 2017 to April 2024) to evaluate rTMS and deep TMS (dTMS) for severe treatment-resistant obsessive-compulsive disorder (OCD), focusing on target-specific and phenotype-specific outcomes and predictors of treatment response. The review analyzed conventional rTMS and dTMS protocols across different brain targets including orbitofrontal cortex, supplementary motor area, and prefrontal cortex. Key predictors of enhanced therapeutic response identified were: higher baseline OCD severity (Y-BOCS score ≥28), older age, lower functional disability, and baseline amygdala hyperactivation during symptom provocation. The most robust evidence supports dTMS and prefrontal targets. The authors concluded that TMS represents a promising neuromodulation approach for treatment-resistant OCD, with target and phenotype selection critical for optimizing outcomes. Specific responder subgroups can be identified based on clinical and neuroimaging characteristics."
+    },
+    {
+      "id": "pmid:40522661",
+      "source": "pubmed",
+      "title": "Repetitive Transcranial Magnetic Stimulation as Maintenance Treatment of Depression: The MAINT-R Randomized Clinical Trial",
+      "journal": "JAMA Network Open",
+      "authors": "Noda Y, et al.",
+      "year": 2025,
+      "date": "2025-06-01",
+      "doi": "10.1001/jamanetworkopen.2025.15881",
+      "pmid": "40522661",
+      "nct": "jRCTs032180188",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40522661/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "The MAINT-R trial was a multicenter non-inferiority randomized clinical trial enrolling 75 adults with treatment-resistant depression (TRD) who had responded to an acute course of bilateral rTMS. Participants were randomized 1:1 to 24 weeks of weekly 1-Hz right dorsolateral prefrontal cortex (DLPFC) rTMS (120% motor threshold, 900 pulses per session) or 24 weeks of lithium pharmacotherapy, all while continuing venlafaxine. The primary outcome was the Montgomery-Åsberg Depression Rating Scale (MADRS) at 24 weeks. Results showed non-inferior efficacy: mean MADRS difference of 0.3 points (95% CI -2.7 to 3.3, P = 0.84) between the two groups. Relapse rates were identical (7 patients in each group). Safety significantly favored rTMS: 3 adverse events versus 16 with lithium (odds ratio 7.10, P = .005), with only one serious adverse event (hospitalization for worsening depression, lithium group). The authors concluded that weekly maintenance rTMS demonstrated comparable efficacy to lithium for TRD relapse prevention with significantly better tolerability."
+    },
+    {
+      "id": "pmid:42340706",
+      "source": "pubmed",
+      "title": "Connectivity- vs Scalp-Based Targeting of Accelerated Transcranial Magnetic Stimulation for Depression: A Randomized Clinical Trial",
+      "journal": "JAMA Psychiatry",
+      "authors": "Taylor JJ, Fox MD, et al.",
+      "year": 2026,
+      "date": "2026-06-24",
+      "doi": "10.1001/jamapsychiatry.2026.1100",
+      "pmid": "42340706",
+      "nct": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42340706/",
+      "publication_types": [
+        "Randomized Controlled Trial"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "This randomized clinical trial compared connectivity-based versus scalp-based targeting for accelerated theta-burst stimulation (aTMS) in adults with treatment-resistant depression (TRD). Forty TMS-naive adults aged 22 to 80 years with a primary diagnosis of major depressive disorder (10 treatments per day for 5 days) were randomized to connectivity-based targeting (left DLPFC region with greatest correlation to a published convergent depression circuit) or scalp-based targeting (Beam F3 method). The primary outcome was change in Montgomery-Åsberg Depression Rating Scale (MADRS). Median MADRS reduction was 24 points in the connectivity group versus 18 in the scalp-based group (P = 0.02). Response rates were 80% in the connectivity group compared with 60% in the scalp-based group. The authors concluded that individualized connectivity-based targeting enhanced the antidepressant effects of high-dose accelerated TMS. A commentary noted that additional multicenter research is needed before this approach becomes standard clinical practice."
+    },
+    {
+      "id": "doi:10.1038/s41380-026-03930-8",
+      "source": "pubmed",
+      "title": "Repetitive transcranial magnetic stimulation (rTMS) combined with antidepressant pharmacotherapy for depression: state-dependent mechanisms, clinical evidence, and translational challenges",
+      "journal": "Molecular Psychiatry",
+      "authors": "Authors not retrieved",
+      "year": 2026,
+      "date": "2026-10-18",
+      "doi": "10.1038/s41380-026-03930-8",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s41380-026-03930-8",
+      "publication_types": [
+        "Review"
+      ],
+      "peer_reviewed": true,
+      "modalities": [
+        "rTMS"
+      ],
+      "indications": [
+        "depression",
+        "major depressive disorder",
+        "treatment-resistant depression"
+      ],
+      "abstract": "This narrative review in Molecular Psychiatry argues that the interaction between rTMS and antidepressant pharmacotherapy is state-dependent rather than simply additive, depending on medication class, stimulation protocol and timing, cortical excitability, metaplasticity, and individual neurobiology. The review synthesizes evidence on rTMS combined with antidepressants, proposes biomarker-, state-, and symptom-informed targeting, and identifies optimal treatment sequencing as a key research priority. Prior evidence suggests SSRIs may potentiate rTMS outcomes while SNRIs do not, and the review frames these differences within a mechanistic account of drug-brain state interactions."
+    }
+  ]
+}

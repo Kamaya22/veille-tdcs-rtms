@@ -1,0 +1,60 @@
+{
+  "week": "2026-W45",
+  "reported": [
+    {
+      "id": "pmid:42340706",
+      "venue_id": "jama-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:40522661",
+      "venue_id": "jama-network-open",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2025
+    },
+    {
+      "id": "pmid:41997374",
+      "venue_id": "journal-affective-disorders",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "pmid:41513052",
+      "venue_id": "neuroscience-biobehavioral-reviews",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "schizophrenia",
+      "evidence_type": "meta-analysis",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1007/s11126-026-10309-z",
+      "venue_id": "psychiatric-quarterly",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "OCD",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    }
+  ]
+}
