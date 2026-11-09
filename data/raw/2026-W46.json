@@ -1,0 +1,11 @@
+{
+  "week": "2026-W46",
+  "fetched_utc": "2026-11-09T04:21:15+00:00",
+  "method": "websearch",
+  "window": {
+    "from": "2026-11-01",
+    "to": "2026-11-09"
+  },
+  "note": "WebSearch effectué sur 7 requêtes couvrant dépression, TOC, schizophrénie, addiction, anxiété/TSPT, medRxiv et ClinicalTrials.gov. Les domaines WebFetch (pubmed, frontiersin, nature, sciencedirect, springer) sont inaccessibles depuis ce runner. Aucune publication identifiée dans la fenêtre Nov 01–09 2026 qui ne figure pas déjà dans data/seen.json (semaines W24–W42).",
+  "studies": []
+}
