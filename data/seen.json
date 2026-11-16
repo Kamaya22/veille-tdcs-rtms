@@ -1,6 +1,6 @@
 {
   "_comment": "Registre anti-doublon : toute étude déjà proposée à la veille (résumée OU écartée) y figure et ne sera plus jamais re-proposée. Écrit par l'AGENT (pas par le script). Clé = identifiant stable (pmid:/doi:/nct:).",
-  "last_run_utc": "2026-11-09T04:21:15+00:00",
+  "last_run_utc": "2026-11-16T08:00:00+00:00",
   "seen": {
     "doi:10.1111/acps.70110": {
       "first_week": "2026-W24",
@@ -341,6 +341,26 @@
       "first_week": "2026-W42",
       "status": "ecarte",
       "title": "RTMS Versus Fluvoxamine in the Treatment of OCD: A Randomized Open-label Pilot Study"
+    },
+    "doi:10.1038/s41598-026-70785-y": {
+      "first_week": "2026-W47",
+      "status": "resume",
+      "title": "Fronto-temporal transcranial direct current stimulation reduces symptoms in treatment-resistant schizophrenia: a randomized sham-controlled trial"
+    },
+    "doi:10.1038/s41380-026-03953-1": {
+      "first_week": "2026-W47",
+      "status": "resume",
+      "title": "State-dependent effects of rTMS on cognitive function in bipolar II disorder: A randomized, double-blind, sham-controlled trial"
+    },
+    "doi:10.3389/fpsyt.2026.1938107": {
+      "first_week": "2026-W47",
+      "status": "resume",
+      "title": "The application of transcranial magnetic stimulation in treatment-resistant depression: insights from omics"
+    },
+    "doi:10.3389/fpsyt.2026.1968733": {
+      "first_week": "2026-W47",
+      "status": "resume",
+      "title": "Accelerated transcranial magnetic stimulation for depression: optimizing dose, spacing, targeting, and durability"
     }
   }
 }

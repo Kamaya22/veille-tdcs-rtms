@@ -1,0 +1,76 @@
+{
+  "week": "2026-W47",
+  "fetched_utc": "2026-11-16T08:00:00+00:00",
+  "method": "websearch",
+  "window": {
+    "from": "2026-11-08",
+    "to": "2026-11-16"
+  },
+  "note": "WebSearch effectué sur 7 requêtes couvrant dépression, TOC, schizophrénie, addiction/craving, anxiété/TSPT, medRxiv et ClinicalTrials.gov. Les domaines WebFetch (pubmed, frontiersin, nature, sciencedirect, springer) sont inaccessibles depuis ce runner. Quatre publications identifiées non présentes dans data/seen.json (W24–W42), publiées en ligne Oct 3–31 2026 et vraisemblablement indexées dans Europe PMC / PubMed dans la fenêtre Nov 08–16.",
+  "studies": [
+    {
+      "source": "pubmed",
+      "peer_reviewed": true,
+      "title": "State-dependent effects of rTMS on cognitive function in bipolar II disorder: A randomized, double-blind, sham-controlled trial",
+      "journal": "Molecular Psychiatry",
+      "authors": "Wang J, Chen X, Hu Y et al.",
+      "year": "2026",
+      "date": "2026-10-31",
+      "doi": "10.1038/s41380-026-03953-1",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s41380-026-03953-1",
+      "publication_types": ["Randomized Controlled Trial"],
+      "abstract": "In this exploratory, randomized, double-blind, sham-controlled 2 × 2 factorial trial, 96 euthymic patients with bipolar II disorder and subjective cognitive impairment were assigned to active or sham 10-Hz repetitive transcranial magnetic stimulation (rTMS) combined with either a complex or simple cognitive task during stimulation. The study examined state-dependent effects of rTMS on cognitive function in bipolar II disorder, testing whether the cognitive state during stimulation modulates the therapeutic effect. The findings provide insights into how contextual factors during rTMS treatment may influence cognitive outcomes in bipolar disorder.",
+      "conditions": ["bipolar disorder", "bipolar II disorder", "cognitive impairment"]
+    },
+    {
+      "source": "pubmed",
+      "peer_reviewed": true,
+      "title": "Fronto-temporal transcranial direct current stimulation reduces symptoms in treatment-resistant schizophrenia: a randomized sham-controlled trial",
+      "journal": "Scientific Reports",
+      "authors": null,
+      "year": "2026",
+      "date": "2026-10-03",
+      "doi": "10.1038/s41598-026-70785-y",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.nature.com/articles/s41598-026-70785-y",
+      "publication_types": ["Randomized Controlled Trial"],
+      "abstract": "A randomized sham-controlled trial of fronto-temporal transcranial direct current stimulation (tDCS) in patients with treatment-resistant schizophrenia. The study investigated the efficacy of a fronto-temporal tDCS montage targeting frontal and temporal regions on psychiatric symptom severity in patients who had not responded to antipsychotic treatment. This trial provides controlled evidence for tDCS as an add-on intervention for treatment-resistant schizophrenia.",
+      "conditions": ["schizophrenia", "treatment-resistant schizophrenia", "psychosis"]
+    },
+    {
+      "source": "pubmed",
+      "peer_reviewed": true,
+      "title": "The application of transcranial magnetic stimulation in treatment-resistant depression: insights from omics",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Yang et al.",
+      "year": "2026",
+      "date": "2026-10-20",
+      "doi": "10.3389/fpsyt.2026.1938107",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1938107/full",
+      "publication_types": ["Review"],
+      "abstract": "A review examining the application of transcranial magnetic stimulation (TMS), including conventional repetitive TMS (rTMS) and intermittent theta-burst stimulation (iTBS), in treatment-resistant depression (TRD) through the lens of omics sciences. The article covers transcriptomic, epigenomic, proteomic, and metabolomic findings associated with TMS response in TRD, aiming to identify biomarkers predicting treatment response and understand molecular mechanisms underlying TMS antidepressant effects. The review discusses established TMS protocols for TRD and emerging omics-informed approaches to personalize treatment.",
+      "conditions": ["depression", "treatment-resistant depression", "major depressive disorder"]
+    },
+    {
+      "source": "pubmed",
+      "peer_reviewed": true,
+      "title": "Accelerated transcranial magnetic stimulation for depression: optimizing dose, spacing, targeting, and durability",
+      "journal": "Frontiers in Psychiatry",
+      "authors": "Concerto C, Bella R",
+      "year": "2026",
+      "date": "2026-10-26",
+      "doi": "10.3389/fpsyt.2026.1968733",
+      "pmid": null,
+      "nct": null,
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1968733/full",
+      "publication_types": ["Review"],
+      "abstract": "A review of accelerated transcranial magnetic stimulation (aTMS) protocols for the treatment of depression. The article focuses on optimization strategies for accelerated TMS, examining key parameters including dose (number of pulses per session and total sessions), inter-session spacing, anatomical and functional targeting approaches, and the durability of antidepressant effects. Rather than focusing solely on speed of delivery, the authors discuss evidence on how these parameters collectively influence clinical outcomes in major depressive disorder, and present considerations for clinical implementation of accelerated TMS protocols.",
+      "conditions": ["depression", "major depressive disorder"]
+    }
+  ]
+}

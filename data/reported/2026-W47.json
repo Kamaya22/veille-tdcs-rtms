@@ -1,0 +1,49 @@
+{
+  "week": "2026-W47",
+  "reported": [
+    {
+      "id": "doi:10.1038/s41598-026-70785-y",
+      "venue_id": "scientific-reports",
+      "source": "pubmed",
+      "modality": "tDCS",
+      "indication": "schizophrenia",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.1038/s41380-026-03953-1",
+      "venue_id": "molecular-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "bipolar disorder",
+      "evidence_type": "rct",
+      "peer_reviewed": true,
+      "open_access": "paywall",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1938107",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "treatment-resistant depression",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    },
+    {
+      "id": "doi:10.3389/fpsyt.2026.1968733",
+      "venue_id": "frontiers-in-psychiatry",
+      "source": "pubmed",
+      "modality": "rTMS",
+      "indication": "depression",
+      "evidence_type": "systematic-review",
+      "peer_reviewed": true,
+      "open_access": "open",
+      "year": 2026
+    }
+  ]
+}
