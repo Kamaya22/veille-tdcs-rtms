@@ -4,8 +4,8 @@ Tu es un agent cloud planifié (hebdomadaire). Ta mission : détecter les **nouv
 parues cette semaine sur la **neuromodulation en psychiatrie** (tDCS — stimulation transcrânienne
 à courant continu — et rTMS — stimulation magnétique transcrânienne répétitive), en résumer les
 **~5 plus pertinentes en français** (Introduction + Résultats clés + Conclusion), committer et
-pousser. Le push d'un nouveau fichier `veilles/<YYYY-Www>.md` déclenche automatiquement une
-GitHub Action qui l'envoie par email — **le push EST la livraison**, le fichier doit donc être
+pousser sur ta branche de session `claude/...`. Une GitHub Action publie alors ton commit sur
+`main` ; l'arrivée d'un nouveau fichier `veilles/<YYYY-Www>.md` déclenche son envoi par email — **le push EST la livraison**, le fichier doit donc être
 entièrement autosuffisant. **S'il n'y a aucune nouvelle étude, tu n'envoies pas d'email.**
 
 Suis ces étapes complètement et dans l'ordre.
@@ -114,20 +114,26 @@ tout comprendre sans cliquer sur un lien.
 1. Committe tous les fichiers modifiés (`veilles/...`, `data/raw/...`, `data/candidates/...`,
    `data/reported/...`, `data/seen.json`, `data/registry.csv` si enrichi) avec le message
    `Veille tDCS/rTMS <YYYY-Www>`.
-2. Pousse sur la branche par défaut **exactement une fois**. La GitHub Action `send-veille.yml`
-   détecte le nouveau `veilles/*.md` et envoie son contenu rendu par email (la première ligne,
-   sans le `# `, devient l'objet). Ne fais pas de second commit touchant `veilles/` (chaque push
-   d'un bulletin envoie un email).
+2. Pousse **ta branche de session** (`claude/...`) **exactement une fois**, avec exactement
+   `git push -u origin HEAD`. **Ne pousse jamais sur `main`** (tu n'en as pas le droit, c'est
+   voulu), ne crée aucune autre branche et n'ouvre aucune pull request. La GitHub Action
+   `promote-to-main.yml` vérifie la branche, la publie sur `main`, la supprime et déclenche
+   `send-veille.yml`, qui envoie le bulletin par email (la première ligne, sans le `# `, devient
+   l'objet). Ne fais pas de second commit touchant `veilles/` (chaque bulletin publié envoie un
+   email).
+3. Ne modifie que `veilles/` et `data/` : un commit qui touche un autre fichier (workflows,
+   `tools/`, `config/`, ce fichier…) est **refusé** et rien n'est publié.
 
 **Cas vide (0 nouvelle étude — Étape 1.2)** :
 1. N'écris **aucun** fichier dans `veilles/`.
 2. Tu peux committer la mise à jour de `data/` (`raw/...`, `candidates/...`, `seen.json` avec
-   `last_run_utc`) avec le message `Veille tDCS/rTMS <YYYY-Www> — aucune nouveauté`, puis pousser.
+   `last_run_utc`) avec le message `Veille tDCS/rTMS <YYYY-Www> — aucune nouveauté`, puis pousser
+   ta branche de session avec `git push -u origin HEAD`.
    Comme rien n'a changé sous `veilles/`, **aucun email n'est envoyé** (conforme à « s'il y en a »).
 
 ## Gestion des échecs
 
-- Si le push échoue, réessaie une fois après `git pull --rebase`. **Ne force-push jamais.**
+- Si le push échoue, réessaie une fois `git push -u origin HEAD`. **Ne force-push jamais**, et ne pousse jamais sur `main`.
 - Un connecteur Gmail peut être disponible dans ta session, mais il ne sait que créer des
   brouillons. **Ne l'utilise pas pour la livraison** : la GitHub Action est le seul canal d'envoi.
 - Pour ajuster le périmètre de la veille (termes, indications, sources, plafond), édite

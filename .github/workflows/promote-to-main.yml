@@ -1,0 +1,102 @@
+name: Promote an agent branch to main
+
+# The cloud routine can only push to its own `claude/...` branch. This workflow checks what
+# that branch changed and, if every file is inside the allowed content directories, moves it
+# onto main, deletes the branch, and starts the email / stats workflows.
+#
+# Runs on `workflow_run`, so this file is always taken from main — see agent-branch.yml.
+# A branch that touches anything else (workflows, tools, INSTRUCTIONS.md…) is refused:
+# the job fails (GitHub notifies you) and the branch is kept for inspection until
+# prune-claude-branches.yml removes it.
+
+on:
+  workflow_run:
+    workflows: ["Agent branch pushed"]
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: promote-to-main
+  cancel-in-progress: false
+
+env:
+  # Every changed path must match this, or the branch is refused.
+  ALLOWED: '^(veilles|data)/'
+  # "<path regex> <workflow file>": dispatched when a promoted change matches.
+  # (A push made with GITHUB_TOKEN does not trigger other workflows, so they are started
+  # explicitly; each has a workflow_dispatch path that picks the latest file.)
+  DISPATCH: |
+    ^veilles/[^/]+\.md$ send-veille.yml
+    ^data/(reported/|registry\.csv$) build-stats.yml
+
+jobs:
+  promote:
+    if: startsWith(github.event.workflow_run.head_branch, 'claude/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Promote the branch onto main
+        env:
+          SHA: ${{ github.event.workflow_run.head_sha }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin "$SHA"
+
+          # Delete the branch, but only if nobody pushed to it since (lease on $SHA).
+          delete_branch() {
+            git push -q origin --force-with-lease="refs/heads/$BRANCH:$SHA" --delete "$BRANCH" \
+              && echo "Deleted $BRANCH." \
+              || echo "::warning::$BRANCH moved or is already gone — left for prune-claude-branches.yml."
+          }
+
+          if git merge-base --is-ancestor "$SHA" HEAD; then
+            echo "main already contains $SHA — nothing to promote."
+            delete_branch; exit 0
+          fi
+
+          BASE=$(git merge-base HEAD "$SHA")
+          CHANGED=$(git diff --name-only "$BASE" "$SHA")
+          echo "Changed files:"; echo "$CHANGED" | sed 's/^/  /'
+
+          if [ -z "$CHANGED" ]; then
+            echo "No file changes."; delete_branch; exit 0
+          fi
+
+          OUTSIDE=$(echo "$CHANGED" | grep -vE "$ALLOWED" || true)
+          if [ -n "$OUTSIDE" ]; then
+            echo "::error::$BRANCH touches files outside the allowed paths — refusing to promote:"
+            echo "$OUTSIDE" | sed 's/^/  /'
+            exit 1
+          fi
+
+          if git merge --ff-only -q "$SHA" 2>/dev/null; then
+            echo "Fast-forwarded main to $SHA."
+          elif git cherry-pick "$BASE..$SHA"; then
+            echo "main had moved on; replayed the branch commits on top of it."
+          else
+            git cherry-pick --abort || true
+            echo "::error::Conflict replaying $BRANCH onto main — promote it by hand."
+            exit 1
+          fi
+
+          git push -q origin HEAD:main
+          delete_branch
+
+          echo "$DISPATCH" | while read -r pattern workflow; do
+            [ -n "$pattern" ] || continue
+            if echo "$CHANGED" | grep -qE "$pattern"; then
+              echo "Starting $workflow"
+              gh workflow run "$workflow" --ref main
+            fi
+          done

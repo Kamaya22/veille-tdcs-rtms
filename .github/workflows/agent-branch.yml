@@ -1,0 +1,23 @@
+name: Agent branch pushed
+
+# Signal only — this job does nothing and has no permissions.
+#
+# The cloud routine pushes its work to its own `claude/...` sandbox branch (it has no
+# credential that can write to main). The real work happens in promote-to-main.yml,
+# which listens for this workflow's completion via `workflow_run`.
+#
+# Why the indirection: a `push`-triggered workflow runs the YAML *from the pushed branch*,
+# so a branch could rewrite the promoter and skip its checks. A `workflow_run` workflow
+# always runs the version on main, which an agent branch cannot change.
+
+on:
+  push:
+    branches: ["claude/**"]
+
+permissions: {}
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Agent branch ${GITHUB_REF_NAME} pushed at ${GITHUB_SHA}."

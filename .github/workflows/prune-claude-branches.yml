@@ -1,0 +1,51 @@
+name: Nettoyage des branches automatiques
+
+# Les exécutions cloud de Claude créent à chaque run une branche de travail
+# claude/*. promote-to-main.yml la supprime dès qu'elle est publiée sur main ;
+# ce workflow ramasse le reste (branches refusées ou en conflit, gardées pour
+# inspection) une fois qu'elles sont inactives depuis MAX_AGE_HOURS.
+
+on:
+  schedule:
+    - cron: "30 4 * * *" # tous les jours à 04:30 UTC
+  workflow_dispatch: {} # déclenchement manuel possible
+
+permissions:
+  contents: write # nécessaire pour supprimer des refs
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Supprimer les branches claude/* inactives
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # On garde une branche modifiée dans les dernières N heures : un agent
+          # cloud peut encore tourner, ou une branche refusée doit être inspectée.
+          MAX_AGE_HOURS: "48"
+        run: |
+          set -uo pipefail
+          cutoff=$(date -u -d "${MAX_AGE_HOURS} hours ago" +%s)
+
+          branches=$(gh api --paginate \
+            "repos/${GITHUB_REPOSITORY}/branches?per_page=100" \
+            --jq '.[].name' | grep '^claude/' || true)
+
+          if [ -z "$branches" ]; then
+            echo "Aucune branche claude/* à examiner."
+            exit 0
+          fi
+
+          echo "$branches" | while IFS= read -r branch; do
+            [ -n "$branch" ] || continue
+            cdate=$(gh api "repos/${GITHUB_REPOSITORY}/branches/${branch}" \
+              --jq '.commit.commit.committer.date')
+            cts=$(date -u -d "$cdate" +%s)
+            if [ "$cts" -lt "$cutoff" ]; then
+              echo "🗑  Suppression de $branch (dernier commit $cdate)"
+              gh api -X DELETE \
+                "repos/${GITHUB_REPOSITORY}/git/refs/heads/${branch}"
+            else
+              echo "⏳ Conservé $branch (récent : $cdate)"
+            fi
+          done
